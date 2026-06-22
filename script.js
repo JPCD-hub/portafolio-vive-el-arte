@@ -12,7 +12,7 @@ const events = [
     title: "Pintura al estilo barroco",
     category: "General",
     date: "15 de abril, 6:00 p.m.",
-    image: "1.jpeg",
+    image: "optimized/flyers/1.jpg",
     gallery: [
       "1/DSC_0002.jpg",
       "1/DSC_0009.jpg",
@@ -97,7 +97,7 @@ const events = [
     title: "Body painting",
     category: "Especial",
     date: "29 de abril, 6:00 p.m.",
-    image: "2.jpeg",
+    image: "optimized/flyers/2.jpg",
     summary: "Pintura en vivo con modelo, copa de vino, saxofon y musica en vivo.",
     description: "Evento contemplativo de body painting con artista en vivo. Una propuesta visual para sumergirse en el color, la expresion corporal y la musica."
   },
@@ -106,7 +106,7 @@ const events = [
     title: "Fotografia Burlesque",
     category: "Especial",
     date: "13 de mayo, 6:00 p.m.",
-    image: "3.jpeg",
+    image: "optimized/flyers/3.jpg",
     galleryFolder: "3",
     gallery: [
       "3/DSC_0002.jpg",
@@ -220,7 +220,7 @@ const events = [
     title: "Shibari, la restriccion erotica",
     category: "Registro",
     date: "20 de mayo, 6:00 p.m.",
-    image: "4.jpeg",
+    image: "optimized/flyers/4.jpg",
     summary: "Charla y demostracion en vivo sobre shibari desde una mirada contemplativa y educativa.",
     description: "Evento de shibari con charla, demostracion en vivo, copa de vino y musica. Una experiencia educativa sobre cuerpo, control, sensibilidad y expresion."
   },
@@ -229,7 +229,7 @@ const events = [
     title: "Miercoles Poesia",
     category: "General",
     date: "3 de junio, despues de las 6:00 p.m.",
-    image: "5.jpeg",
+    image: "optimized/flyers/5.jpg",
     summary: "Lectura de poemas, poesia propia o de autor y palabras que conectan.",
     description: "Encuentro poetico para leer, escuchar y compartir poemas en un ambiente intimo y creativo. Una invitacion a conectar desde la palabra."
   },
@@ -238,7 +238,7 @@ const events = [
     title: "Body Painting",
     category: "General",
     date: "10 de junio, 6:00 p.m.",
-    image: "6.jpeg",
+    image: "optimized/flyers/6.jpg",
     summary: "Expresion, color y libertad con artistas en vivo, musica y comunidad.",
     description: "Evento contemplativo de body painting con artistas en vivo, modelo, musica y comunidad. Una experiencia enfocada en expresion, color y libertad."
   }
@@ -313,12 +313,31 @@ function findGalleryImages(folder) {
   return Promise.all(checks).then((results) => results.filter(Boolean));
 }
 
+function getOptimizedPhotoPath(photo) {
+  return photo.replace(/^(1|3)\//, "optimized/$1/");
+}
+
+function hydrateGalleryImages() {
+  photoGallery.querySelectorAll(".gallery-item img").forEach((image) => {
+    const markLoaded = () => image.closest(".gallery-item")?.classList.add("is-loaded");
+    if (image.complete) {
+      markLoaded();
+    } else {
+      image.addEventListener("load", markLoaded, { once: true });
+      image.addEventListener("error", markLoaded, { once: true });
+    }
+  });
+}
+
 function renderGallery() {
   const visibleImages = activeGalleryImages.slice(0, visibleGalleryCount);
   const remainingImages = activeGalleryImages.length - visibleImages.length;
 
   photoGallery.innerHTML = visibleImages.map((photo, index) => `
-    <img src="${photo}" alt="Registro fotografico ${index + 1} de ${activeGalleryTitle}" loading="lazy" decoding="async">
+    <figure class="gallery-item">
+      <span class="image-loader" aria-hidden="true"></span>
+      <img src="${getOptimizedPhotoPath(photo)}" alt="Registro fotografico ${index + 1} de ${activeGalleryTitle}" loading="lazy" decoding="async">
+    </figure>
   `).join("");
 
   if (remainingImages > 0) {
@@ -328,6 +347,8 @@ function renderGallery() {
       </button>
     `);
   }
+
+  hydrateGalleryImages();
 }
 
 async function openEventDetail(eventId) {

@@ -673,18 +673,53 @@ a {
   gap: 14px;
 }
 
-.photo-gallery img {
+.gallery-item {
+  position: relative;
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
+  margin: 0;
+  overflow: hidden;
   border: 1px solid var(--line-strong);
   background: var(--paper-deep);
   box-shadow: 0 16px 42px rgba(30, 18, 12, 0.12);
-  transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
-.photo-gallery img:hover {
+.image-loader {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 250, 242, 0.62), transparent),
+    linear-gradient(135deg, rgba(112, 22, 41, 0.12), rgba(17, 16, 15, 0.08));
+  background-size: 220% 100%, 100% 100%;
+  animation: imageLoading 1.15s ease-in-out infinite;
+}
+
+.gallery-item img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.gallery-item.is-loaded .image-loader {
+  opacity: 0;
+  animation-play-state: paused;
+}
+
+.gallery-item.is-loaded img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gallery-item:hover img {
   transform: translateY(-4px) scale(1.015);
+}
+
+.gallery-item:hover {
   box-shadow: 0 24px 58px rgba(30, 18, 12, 0.18);
 }
 
@@ -709,6 +744,16 @@ a {
   transform: translateY(-2px);
   background: var(--wine);
   box-shadow: 0 18px 44px rgba(30, 18, 12, 0.16);
+}
+
+@keyframes imageLoading {
+  from {
+    background-position: 180% 0, center;
+  }
+
+  to {
+    background-position: -80% 0, center;
+  }
 }
 
 .contact {
