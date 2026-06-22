@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Vive El Arte</title>
+  <meta name="description" content="Portafolio de eventos realizados por Vive El Arte con fichas de evento, registros fotograficos y contacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,800;6..96,900&family=Inter:wght@400;500;700;900&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio">Vive El Arte</a>
+      <div class="nav-links">
+        <a href="#eventos">Eventos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Portafolio de eventos</p>
+        <h1><span>Vive El</span> Arte</h1>
+        <p class="hero-text">VIVE EL ARTE, un espacio que estamos conformando con el fin de crear vitrinas y espacios de difusion para las distintas expresiones artisticas de nuestra ciudad.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#eventos">Ver eventos</a>
+          <a class="button secondary" href="https://wa.me/573104899379" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Resumen del portafolio">
+        <p class="card-label">Archivo creativo</p>
+        <span>6</span>
+        <p>Eventos contemplativos, educativos y participativos realizados cada miercoles en un Cafe Bar del centro de Pereira.</p>
+      </div>
+    </section>
+
+    <section class="section intro-panel" aria-label="Descripcion del proyecto">
+      <div>
+        <p class="eyebrow">Memoria cultural</p>
+        <h2>Una vitrina para la expresion artistica local</h2>
+      </div>
+      <p>Dichos eventos se realizan cada miercoles, con un evento diferente cada vez, en un Cafe Bar ubicado en el centro de Pereira. Todos nuestros eventos pueden ser contemplativos, educativos y participativos.</p>
+    </section>
+
+    <section class="section" id="eventos">
+      <div class="section-heading">
+        <p class="eyebrow">Eventos realizados</p>
+        <h2>Eventos del portafolio</h2>
+      </div>
+
+      <div class="filters" aria-label="Filtros de categoria">
+        <button class="filter is-active" type="button" data-category="Todos">Todos</button>
+        <button class="filter" type="button" data-category="General">General</button>
+        <button class="filter" type="button" data-category="Especial">Especial</button>
+        <button class="filter" type="button" data-category="Registro">Registro fotografico</button>
+      </div>
+
+      <div class="events-grid" id="eventsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="event-detail" id="detalleEvento" hidden>
+      <div class="detail-shell">
+        <button class="back-button" type="button" id="backToEvents">Volver a todos los eventos</button>
+        <div class="detail-layout">
+          <div class="detail-visual" aria-hidden="true">
+            <img id="detailImage" src="" alt="">
+            <span id="detailNumber"></span>
+            <p>Ficha de evento</p>
+          </div>
+          <div class="detail-content">
+            <p class="eyebrow" id="detailCategory"></p>
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription"></p>
+            <div class="detail-meta">
+              <span id="detailDate"></span>
+              <span>Portafolio Vive El Arte</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-block">
+          <h3>Registro fotografico</h3>
+          <div class="photo-gallery" id="photoGallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos de tu proximo evento</h2>
+        <p>Escribenos para cotizaciones, alianzas, invitaciones o para ampliar la informacion de algun evento del portafolio.</p>
+        <div class="contact-lines">
+          <a href="mailto:viveelarteiii@gmail.com">viveelarteiii@gmail.com</a>
+          <a href="https://wa.me/573104899379" target="_blank" rel="noopener">WhatsApp: 310 4899379</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="" method="POST">
+        <label>
+          Nombre
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Correo
+          <input type="email" name="correo" placeholder="correo@ejemplo.com" required>
+        </label>
+        <label>
+          Telefono
+          <input type="tel" name="telefono" placeholder="Tu numero de contacto">
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="5" placeholder="Cuentanos que necesitas" required></textarea>
+        </label>
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde Portafolio Vive El Arte">
+        <button class="button primary" type="submit">Enviar mensaje</button>
+        <p class="form-note" id="formNote">El formulario abre WhatsApp con el mensaje escrito. Cuando tengas el enlace de Formspree, se agrega en script.js.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Portafolio Vive El Arte</p>
+    <p>Eventos, arte y memoria fotografica.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
