@@ -254,7 +254,6 @@ const detailDescription = document.querySelector("#detailDescription");
 const detailDate = document.querySelector("#detailDate");
 const photoGallery = document.querySelector("#photoGallery");
 const backToEvents = document.querySelector("#backToEvents");
-const filters = document.querySelectorAll(".filter");
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector("#formNote");
 const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .events-grid, .contact-copy, .contact-form");
@@ -404,15 +403,6 @@ photoGallery.addEventListener("click", (event) => {
 backToEvents.addEventListener("click", () => {
   detailSection.hidden = true;
   document.querySelector("#eventos").scrollIntoView({ behavior: "smooth", block: "start" });
-});
-
-filters.forEach((filter) => {
-  filter.addEventListener("click", () => {
-    filters.forEach((item) => item.classList.remove("is-active"));
-    filter.classList.add("is-active");
-    renderEvents(filter.dataset.category);
-    detailSection.hidden = true;
-  });
 });
 
 contactForm.addEventListener("submit", async (event) => {
