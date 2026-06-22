@@ -1,5 +1,10 @@
 const FORMSPREE_ENDPOINT = "";
 const WHATSAPP_NUMBER = "573104899379";
+const GALLERY_BATCH_SIZE = 18;
+
+let activeGalleryImages = [];
+let activeGalleryTitle = "";
+let visibleGalleryCount = GALLERY_BATCH_SIZE;
 
 const events = [
   {
@@ -275,7 +280,7 @@ function renderEvents(category = "Todos") {
   eventsGrid.innerHTML = visibleEvents.map((event) => `
     <button class="event-card" type="button" data-event-id="${event.id}" aria-label="Ver detalle de ${event.title}">
       <div class="event-image-wrap">
-        <img class="event-image" src="${event.image}" alt="Flyer de ${event.title}">
+        <img class="event-image" src="${event.image}" alt="Flyer de ${event.title}" loading="lazy" decoding="async">
         <span class="event-number">${String(event.id).padStart(2, "0")}</span>
       </div>
       <div class="event-card-body">
@@ -308,6 +313,23 @@ function findGalleryImages(folder) {
   return Promise.all(checks).then((results) => results.filter(Boolean));
 }
 
+function renderGallery() {
+  const visibleImages = activeGalleryImages.slice(0, visibleGalleryCount);
+  const remainingImages = activeGalleryImages.length - visibleImages.length;
+
+  photoGallery.innerHTML = visibleImages.map((photo, index) => `
+    <img src="${photo}" alt="Registro fotografico ${index + 1} de ${activeGalleryTitle}" loading="lazy" decoding="async">
+  `).join("");
+
+  if (remainingImages > 0) {
+    photoGallery.insertAdjacentHTML("beforeend", `
+      <button class="load-more" type="button" id="loadMoreGallery">
+        Ver mas fotos (${remainingImages})
+      </button>
+    `);
+  }
+}
+
 async function openEventDetail(eventId) {
   const event = events.find((item) => item.id === Number(eventId));
   if (!event) return;
@@ -329,9 +351,10 @@ async function openEventDetail(eventId) {
   const galleryImages = event.gallery || await findGalleryImages(event.galleryFolder);
 
   if (galleryImages.length > 0) {
-    photoGallery.innerHTML = galleryImages.map((photo, index) => `
-      <img src="${photo}" alt="Registro fotografico ${index + 1} de ${event.title}">
-    `).join("");
+    activeGalleryImages = galleryImages;
+    activeGalleryTitle = event.title;
+    visibleGalleryCount = GALLERY_BATCH_SIZE;
+    renderGallery();
   } else {
   photoGallery.innerHTML = `
     <div class="empty-gallery">
@@ -349,6 +372,12 @@ eventsGrid.addEventListener("click", (event) => {
   const card = event.target.closest(".event-card");
   if (!card) return;
   openEventDetail(card.dataset.eventId);
+});
+
+photoGallery.addEventListener("click", (event) => {
+  if (!event.target.closest("#loadMoreGallery")) return;
+  visibleGalleryCount += GALLERY_BATCH_SIZE;
+  renderGallery();
 });
 
 backToEvents.addEventListener("click", () => {
