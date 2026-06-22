@@ -228,7 +228,7 @@ const events = [
     id: 5,
     title: "Miercoles Poesia",
     category: "General",
-    date: "3 de junio, despues de las 6:00 p.m.",
+    date: "3 de junio, 6:00 p.m.",
     image: "optimized/flyers/5.jpg",
     summary: "Lectura de poemas, poesia propia o de autor y palabras que conectan.",
     description: "Encuentro poetico para leer, escuchar y compartir poemas en un ambiente intimo y creativo. Una invitacion a conectar desde la palabra."
