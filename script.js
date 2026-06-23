@@ -267,6 +267,24 @@ const events = [
     category: "General",
     date: "3 de junio, 6:00 p.m.",
     image: "optimized/flyers/5.jpg",
+    gallery: [
+      "5/IMG-20260604-WA0004.jpg",
+      "5/IMG-20260604-WA0017.jpg",
+      "5/IMG-20260604-WA0038.jpg",
+      "5/IMG-20260604-WA0047.jpg",
+      "5/IMG-20260604-WA0060.jpg",
+      "5/IMG-20260604-WA0065.jpg",
+      "5/IMG-20260604-WA0068.jpg",
+      "5/IMG-20260604-WA0082.jpg",
+      "5/IMG-20260604-WA0084.jpg",
+      "5/IMG-20260604-WA0086.jpg",
+      "5/IMG-20260604-WA0091.jpg",
+      "5/IMG-20260604-WA0093.jpg",
+      "5/IMG-20260604-WA0099.jpg",
+      "5/IMG-20260604-WA0101.jpg",
+      "5/IMG-20260604-WA0105.jpg",
+      "5/IMG-20260604-WA0106.jpg"
+    ],
     summary: "Lectura de poemas, poesia propia o de autor y palabras que conectan.",
     description: "Encuentro poetico para leer, escuchar y compartir poemas en un ambiente intimo y creativo. Una invitacion a conectar desde la palabra."
   },
@@ -350,7 +368,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|2|3|4)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
+  return photo.replace(/^(1|2|3|4|5)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
 }
 
 function hydrateGalleryImages() {
