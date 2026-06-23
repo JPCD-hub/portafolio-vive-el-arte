@@ -223,7 +223,12 @@ const events = [
       "3/DSC_0686.jpg",
       "3/DSC_0692.jpg",
       "3/DSC_0709.jpg",
-      "3/DSC_0711.jpg"
+      "3/DSC_0711.jpg",
+      "3/IMG-20260513-WA0199.jpg",
+      "3/IMG-20260513-WA0201.jpg",
+      "3/IMG-20260513-WA0205.jpg",
+      "3/IMG-20260513-WA0209.jpg",
+      "3/IMG-20260513-WA0211.jpg"
     ],
     summary: "Fotografia contemplativa y educativa con tematica burlesque y modelo en vivo.",
     description: "Experiencia de fotografia con modelo en vivo, tips fotograficos, musica y participacion abierta para vivir el evento como fotografo o modelo."
