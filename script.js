@@ -98,6 +98,19 @@ const events = [
     category: "Especial",
     date: "29 de abril, 6:00 p.m.",
     image: "optimized/flyers/2.jpg",
+    gallery: [
+      "2/IMG-20260430-WA0004.jpg",
+      "2/IMG-20260430-WA0185.jpg",
+      "2/IMG-20260430-WA0187.jpg",
+      "2/IMG-20260430-WA0195.jpg",
+      "2/IMG-20260430-WA0198.jpg",
+      "2/IMG-20260430-WA0200.jpg",
+      "2/IMG-20260430-WA0202.jpg",
+      "2/IMG-20260430-WA0204.jpg",
+      "2/IMG-20260430-WA0208.jpg",
+      "2/IMG-20260430-WA0210.jpg",
+      "2/IMG-20260430-WA0214.jpg"
+    ],
     summary: "Pintura en vivo con modelo, copa de vino, saxofon y musica en vivo.",
     description: "Evento contemplativo de body painting con artista en vivo. Una propuesta visual para sumergirse en el color, la expresion corporal y la musica."
   },
