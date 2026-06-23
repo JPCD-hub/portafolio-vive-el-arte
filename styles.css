@@ -11,7 +11,7 @@
   --line-strong: rgba(17, 16, 15, 0.34);
   --shadow: 0 28px 90px rgba(30, 18, 12, 0.16);
   --script: "Tangerine", "Brush Script MT", cursive;
-  --serif: var(--script);
+  --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Inter", system-ui, sans-serif;
   --condensed: "Inter", system-ui, sans-serif;
   --ui: "Inter", system-ui, sans-serif;
@@ -89,7 +89,7 @@ a {
 }
 
 .brand {
-  font-family: var(--serif);
+  font-family: var(--script);
   font-size: 2.7rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -167,8 +167,8 @@ a {
   margin: 0;
   font-family: var(--serif);
   font-weight: 700;
-  line-height: 0.9;
-  letter-spacing: 0;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
 }
 
 .hero-content h1 {

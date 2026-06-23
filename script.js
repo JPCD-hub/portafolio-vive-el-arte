@@ -368,7 +368,6 @@ const eventsGrid = document.querySelector("#eventsGrid");
 const detailSection = document.querySelector("#detalleEvento");
 const detailImage = document.querySelector("#detailImage");
 const detailNumber = document.querySelector("#detailNumber");
-const detailCategory = document.querySelector("#detailCategory");
 const detailTitle = document.querySelector("#detailTitle");
 const detailDescription = document.querySelector("#detailDescription");
 const detailDate = document.querySelector("#detailDate");
@@ -391,19 +390,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-function renderEvents(category = "Todos") {
-  const visibleEvents = category === "Todos"
-    ? events
-    : events.filter((event) => event.category === category);
-
-  eventsGrid.innerHTML = visibleEvents.map((event) => `
+function renderEvents() {
+  eventsGrid.innerHTML = events.map((event) => `
     <button class="event-card" type="button" data-event-id="${event.id}" aria-label="Ver detalle de ${event.title}">
       <div class="event-image-wrap">
         <img class="event-image" src="${event.image}" alt="Flyer de ${event.title}" loading="lazy" decoding="async">
         <span class="event-number">${String(event.id).padStart(2, "0")}</span>
       </div>
       <div class="event-card-body">
-        <p class="eyebrow">${event.category}</p>
         <h3>${event.title}</h3>
         <p>${event.summary}</p>
         <span>${event.date}</span>
@@ -477,7 +471,6 @@ async function openEventDetail(eventId) {
   detailImage.src = event.image;
   detailImage.alt = `Flyer de ${event.title}`;
   detailNumber.textContent = String(event.id).padStart(2, "0");
-  detailCategory.textContent = event.category;
   detailTitle.textContent = event.title;
   detailDescription.textContent = event.description;
   detailDate.textContent = event.date;
