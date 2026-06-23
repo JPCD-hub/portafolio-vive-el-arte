@@ -302,7 +302,34 @@ a {
   text-transform: uppercase;
 }
 
-.hero-card span {
+.live-photo-placeholder {
+  position: absolute;
+  right: 28px;
+  top: 82px;
+  width: min(46%, 190px);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border: 1px dashed rgba(112, 22, 41, 0.42);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.74), rgba(112, 22, 41, 0.08)),
+    var(--paper-deep);
+  transform: rotate(2deg);
+}
+
+.live-photo-placeholder span {
+  font-family: var(--condensed);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--wine);
+}
+
+.hero-card > span {
   font-family: var(--serif);
   font-size: clamp(7rem, 14vw, 13rem);
   font-weight: 900;
@@ -911,6 +938,11 @@ a {
     min-height: 340px;
   }
 
+  .live-photo-placeholder {
+    width: 150px;
+    top: 72px;
+  }
+
   .detail-visual {
     max-width: 520px;
   }
@@ -951,6 +983,15 @@ a {
   .detail-shell,
   .contact-form {
     padding: 22px;
+  }
+
+  .live-photo-placeholder {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    max-width: 240px;
+    margin: 58px 0 24px auto;
   }
 
   .event-card {
