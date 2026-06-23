@@ -89,8 +89,8 @@ const events = [
       "1/DSC_0426.jpg",
       "1/DSC_0433.jpg"
     ],
-    summary: "Pintura en vivo con modelo, musica en vivo y experiencia contemplativa.",
-    description: "Evento de pintura al estilo barroco con modelo en vivo, saxofon y musica en vivo. Una experiencia para compartir, apreciar y apoyar la insonorizacion de Live."
+    summary: "Una noche de pintura en vivo inspirada en la estetica barroca, con modelo, vino y musica.",
+    description: "Pintura al estilo barroco fue una experiencia contemplativa alrededor del retrato, la luz y la puesta en escena. El publico acompano el proceso de una obra en vivo con modelo, saxofon, musica y una copa de vino, en un ambiente intimo que mezclo elegancia, observacion y encuentro artistico. Al final, la pieza hizo parte de una dinamica de subasta entre los asistentes, reforzando la idea de Vive El Arte como vitrina para creadores locales."
   },
   {
     id: 2,
@@ -111,8 +111,8 @@ const events = [
       "2/IMG-20260430-WA0210.jpg",
       "2/IMG-20260430-WA0214.jpg"
     ],
-    summary: "Pintura en vivo con modelo, copa de vino, saxofon y musica en vivo.",
-    description: "Evento contemplativo de body painting con artista en vivo. Una propuesta visual para sumergirse en el color, la expresion corporal y la musica."
+    summary: "Body painting contemplativo con modelo en vivo, color, musica y registro del proceso creativo.",
+    description: "Este encuentro de body painting propuso el cuerpo como lienzo vivo y la pintura como una accion en tiempo real. La galeria registra el avance de la obra, los detalles del trazo, la relacion entre artista y modelo, y la energia del cafe bar durante la noche. Fue un evento para observar de cerca la transformacion del cuerpo mediante color, textura, musica en vivo y una atmosfera de contemplacion colectiva."
   },
   {
     id: 3,
@@ -230,8 +230,8 @@ const events = [
       "3/IMG-20260513-WA0209.jpg",
       "3/IMG-20260513-WA0211.jpg"
     ],
-    summary: "Fotografia contemplativa y educativa con tematica burlesque y modelo en vivo.",
-    description: "Experiencia de fotografia con modelo en vivo, tips fotograficos, musica y participacion abierta para vivir el evento como fotografo o modelo."
+    summary: "Sesion burlesque para explorar fotografia, direccion de modelo, luz y participacion del publico.",
+    description: "Fotografia Burlesque reunio una puesta en escena sensual, teatral y educativa para vivir la fotografia desde ambos lados de la camara. El evento combino modelo en vivo, consejos fotograficos, musica y participacion abierta, permitiendo que asistentes experimentaran como fotografos, observadores o parte de la escena. Las imagenes documentan poses, gestos, detalles de vestuario y momentos de direccion creativa en un ambiente intimo."
   },
   {
     id: 4,
@@ -263,8 +263,8 @@ const events = [
       "4/SHIBARI 068.jpg.jpeg",
       "4/SHIBARI 070.jpg.jpeg"
     ],
-    summary: "Charla y demostracion en vivo sobre shibari desde una mirada contemplativa y educativa.",
-    description: "Evento de shibari con charla, demostracion en vivo, copa de vino y musica. Una experiencia educativa sobre cuerpo, control, sensibilidad y expresion."
+    summary: "Charla y demostracion de shibari como practica visual, corporal y educativa.",
+    description: "Shibari, la restriccion erotica, abordo el cuerpo, la confianza y la tension desde una mirada contemplativa y pedagogica. La noche incluyo charla, demostracion en vivo, musica y copa de vino, creando un espacio para observar como la restriccion puede convertirse en lenguaje visual y sensorial. El registro fotografico destaca la composicion de las cuerdas, la relacion entre modelo y artista, y la fuerza estetica de una practica guiada con respeto y cuidado."
   },
   {
     id: 5,
@@ -290,8 +290,8 @@ const events = [
       "5/IMG-20260604-WA0105.jpg",
       "5/IMG-20260604-WA0106.jpg"
     ],
-    summary: "Lectura de poemas, poesia propia o de autor y palabras que conectan.",
-    description: "Encuentro poetico para leer, escuchar y compartir poemas en un ambiente intimo y creativo. Una invitacion a conectar desde la palabra."
+    summary: "Microfono poetico para compartir textos, escuchar voces locales y crear comunidad desde la palabra.",
+    description: "Miercoles Poesia fue un encuentro abierto para leer, escuchar y compartir poemas propios o de autor. En un ambiente cercano, las palabras funcionaron como punto de reunion entre artistas, asistentes y amantes de la escritura. El registro del evento recoge momentos de lectura, conversacion y escucha, mostrando una experiencia mas intima donde la poesia se convierte en puente para conectar sensibilidades."
   },
   {
     id: 6,
@@ -359,8 +359,8 @@ const events = [
       "6/DSC_0713.jpg",
       "6/DSC_0722.jpg"
     ],
-    summary: "Expresion, color y libertad con artistas en vivo, musica y comunidad.",
-    description: "Evento contemplativo de body painting con artistas en vivo, modelo, musica y comunidad. Una experiencia enfocada en expresion, color y libertad."
+    summary: "Body painting de alto impacto visual con artistas en vivo, comunidad, fuego cromatico y musica.",
+    description: "Body Painting fue una experiencia de expresion, color y libertad, centrada en el cuerpo como soporte artistico y en la pintura como acto performatico. La propuesta visual trabajo una paleta intensa, gestos organicos y una puesta en escena de gran fuerza cromatica. Las fotografias muestran el proceso, los detalles de la obra corporal, la interaccion con la comunidad y la energia de una noche pensada para contemplar el arte en vivo."
   }
 ];
 
