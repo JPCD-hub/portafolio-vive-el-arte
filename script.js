@@ -395,9 +395,9 @@ function renderEvents() {
     <button class="event-card" type="button" data-event-id="${event.id}" aria-label="Ver detalle de ${event.title}">
       <div class="event-image-wrap">
         <img class="event-image" src="${event.image}" alt="Flyer de ${event.title}" loading="lazy" decoding="async">
-        <span class="event-number">${String(event.id).padStart(2, "0")}</span>
       </div>
       <div class="event-card-body">
+        <span class="event-index">${String(event.id).padStart(2, "0")}</span>
         <h3>${event.title}</h3>
         <p>${event.summary}</p>
         <span>${event.date}</span>
