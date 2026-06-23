@@ -531,7 +531,6 @@ contactForm.addEventListener("submit", async (event) => {
   const data = new FormData(contactForm);
   const message = [
     "Hola, soy " + data.get("nombre"),
-    "Correo: " + data.get("correo"),
     "Telefono: " + (data.get("telefono") || "No indicado"),
     "Mensaje: " + data.get("mensaje")
   ].join("%0A");
