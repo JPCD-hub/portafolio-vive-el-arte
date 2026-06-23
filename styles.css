@@ -255,9 +255,9 @@ a {
 .hero-card {
   position: relative;
   min-height: 460px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 26px;
   padding: 34px;
   border: 1px solid var(--line-strong);
   background:
@@ -303,19 +303,19 @@ a {
 }
 
 .live-photo-placeholder {
-  position: absolute;
-  right: 28px;
-  top: 82px;
-  width: min(46%, 190px);
-  aspect-ratio: 4 / 3;
+  align-self: center;
+  justify-self: center;
+  width: min(100%, 360px);
+  aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
-  padding: 18px;
+  padding: 24px;
   border: 1px dashed rgba(112, 22, 41, 0.42);
   background:
     linear-gradient(135deg, rgba(255, 250, 242, 0.74), rgba(112, 22, 41, 0.08)),
     var(--paper-deep);
-  transform: rotate(2deg);
+  transform: rotate(1deg);
+  box-shadow: 0 22px 58px rgba(30, 18, 12, 0.08);
 }
 
 .live-photo-placeholder span {
@@ -326,14 +326,6 @@ a {
   letter-spacing: 0.12em;
   text-align: center;
   text-transform: uppercase;
-  color: var(--wine);
-}
-
-.hero-card > span {
-  font-family: var(--serif);
-  font-size: clamp(7rem, 14vw, 13rem);
-  font-weight: 900;
-  line-height: 0.72;
   color: var(--wine);
 }
 
@@ -939,8 +931,7 @@ a {
   }
 
   .live-photo-placeholder {
-    width: 150px;
-    top: 72px;
+    width: min(100%, 320px);
   }
 
   .detail-visual {
@@ -986,12 +977,9 @@ a {
   }
 
   .live-photo-placeholder {
-    position: relative;
-    right: auto;
-    top: auto;
     width: 100%;
     max-width: 240px;
-    margin: 58px 0 24px auto;
+    margin: 44px auto 10px;
   }
 
   .event-card {
