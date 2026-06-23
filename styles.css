@@ -259,6 +259,7 @@ a {
   grid-template-rows: auto 1fr auto;
   gap: 26px;
   padding: 34px;
+  padding-top: 78px;
   border: 1px solid var(--line-strong);
   background:
     linear-gradient(135deg, rgba(255, 250, 242, 0.92), rgba(229, 221, 210, 0.76)),
@@ -305,7 +306,7 @@ a {
 .live-photo-placeholder {
   align-self: center;
   justify-self: center;
-  width: min(100%, 360px);
+  width: min(100%, 340px);
   aspect-ratio: 16 / 10;
   display: grid;
   place-items: center;
