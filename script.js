@@ -313,7 +313,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|3)\//, "optimized/$1/");
+  return photo.replace(/^(1|2|3)\//, "optimized/$1/");
 }
 
 function hydrateGalleryImages() {
