@@ -234,6 +234,30 @@ const events = [
     category: "Registro",
     date: "20 de mayo, 6:00 p.m.",
     image: "optimized/flyers/4.jpg",
+    gallery: [
+      "4/SHIBARI 019.jpg.jpeg",
+      "4/SHIBARI 022.jpg.jpeg",
+      "4/SHIBARI 026.jpg.jpeg",
+      "4/SHIBARI 028.jpg.jpeg",
+      "4/SHIBARI 029.jpg.jpeg",
+      "4/SHIBARI 032.jpg.jpeg",
+      "4/SHIBARI 033.jpg.jpeg",
+      "4/SHIBARI 034.jpg.jpeg",
+      "4/SHIBARI 035.jpg.jpeg",
+      "4/SHIBARI 041.jpg.jpeg",
+      "4/SHIBARI 042.jpg.jpeg",
+      "4/SHIBARI 043.jpg.jpeg",
+      "4/SHIBARI 044.jpg.jpeg",
+      "4/SHIBARI 045.jpg.jpeg",
+      "4/SHIBARI 049.jpg.jpeg",
+      "4/SHIBARI 050.jpg.jpeg",
+      "4/SHIBARI 051.jpg.jpeg",
+      "4/SHIBARI 052.jpg.jpeg",
+      "4/SHIBARI 066.jpg.jpeg",
+      "4/SHIBARI 067.jpg.jpeg",
+      "4/SHIBARI 068.jpg.jpeg",
+      "4/SHIBARI 070.jpg.jpeg"
+    ],
     summary: "Charla y demostracion en vivo sobre shibari desde una mirada contemplativa y educativa.",
     description: "Evento de shibari con charla, demostracion en vivo, copa de vino y musica. Una experiencia educativa sobre cuerpo, control, sensibilidad y expresion."
   },
@@ -326,7 +350,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|2|3)\//, "optimized/$1/");
+  return photo.replace(/^(1|2|3|4)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
 }
 
 function hydrateGalleryImages() {
