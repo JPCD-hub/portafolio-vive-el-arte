@@ -375,7 +375,7 @@ const photoGallery = document.querySelector("#photoGallery");
 const backToEvents = document.querySelector("#backToEvents");
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector("#formNote");
-const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .events-grid, .contact-copy, .contact-form");
+const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .contact-copy, .contact-form");
 
 revealItems.forEach((item) => item.classList.add("reveal"));
 

@@ -940,6 +940,16 @@ a {
   .photo-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .event-image-wrap {
+    aspect-ratio: 4 / 5.65;
+    padding: 12px;
+  }
 }
 
 @media (max-width: 580px) {
