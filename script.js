@@ -457,7 +457,37 @@ const backToEvents = document.querySelector("#backToEvents");
 const backToArtists = document.querySelector("#backToArtists");
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector("#formNote");
+const themeToggle = document.querySelector("#themeToggle");
+const themeToggleText = themeToggle?.querySelector(".theme-toggle-text");
 const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .contact-copy, .contact-form");
+
+function getPreferredTheme() {
+  let savedTheme = null;
+  try {
+    savedTheme = localStorage.getItem("viveElArteTheme");
+  } catch (error) {}
+  if (savedTheme === "dark" || savedTheme === "light") return savedTheme;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  if (!themeToggle) return;
+  const isDark = theme === "dark";
+  themeToggle.setAttribute("aria-pressed", String(isDark));
+  themeToggle.setAttribute("aria-label", isDark ? "Activar modo claro" : "Activar modo oscuro");
+  if (themeToggleText) themeToggleText.textContent = isDark ? "Claro" : "Oscuro";
+}
+
+applyTheme(getPreferredTheme());
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  try {
+    localStorage.setItem("viveElArteTheme", nextTheme);
+  } catch (error) {}
+  applyTheme(nextTheme);
+});
 
 revealItems.forEach((item) => item.classList.add("reveal"));
 
