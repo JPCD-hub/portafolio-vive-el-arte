@@ -591,15 +591,16 @@ function renderArtists() {
 function renderSponsors() {
   sponsorsGrid.innerHTML = sponsors.map((sponsor) => `
     <article class="sponsor-card">
-      <div class="sponsor-logo">
-        <img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">
-      </div>
+      ${sponsor.instagram ? `<a class="sponsor-logo" href="${sponsor.instagram}" target="_blank" rel="noopener" aria-label="Ver Instagram de ${sponsor.name}">` : `<div class="sponsor-logo">`}
+          <img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">
+      ${sponsor.instagram ? `</a>` : `</div>`}
       <div class="sponsor-card-body">
         <p>${sponsor.event}</p>
         <h3>${sponsor.name}</h3>
         <div class="sponsor-links">
-          ${sponsor.instagram ? `<a href="${sponsor.instagram}" target="_blank" rel="noopener">Instagram</a>` : `<span>Instagram pendiente</span>`}
-          ${sponsor.whatsapp ? `<a href="${sponsor.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>` : `<span>WhatsApp pendiente</span>`}
+          ${sponsor.instagram ? `<a href="${sponsor.instagram}" target="_blank" rel="noopener">Instagram</a>` : ``}
+          ${sponsor.whatsapp ? `<a href="${sponsor.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>` : ``}
+          ${!sponsor.instagram && !sponsor.whatsapp ? `<span>Contacto por confirmar</span>` : ``}
         </div>
       </div>
     </article>
