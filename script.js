@@ -441,28 +441,28 @@ const sponsors = [
   {
     name: "Duvan Lasso",
     logo: "",
-    description: "Fotografo y creador visual enfocado en retrato, direccion de imagen y registro de experiencias artisticas.",
+    description: "",
     instagram: "https://www.instagram.com/ph_duvan.lasso/",
     whatsapp: "https://wa.me/573103832865"
   },
   {
     name: "Hechicera Arte Ancestral",
     logo: "",
-    description: "Emprendimiento de arte ancestral y piezas con identidad espiritual, ornamental y artesanal.",
+    description: "",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Veronica Fernandez",
     logo: "",
-    description: "Marca de styling y maquillaje enfocada en imagen personal, estetica escenica y produccion visual.",
+    description: "",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Corzo",
     logo: "",
-    description: "Emprendimiento local aliado de experiencias creativas, bienestar y encuentros culturales.",
+    description: "",
     instagram: "",
     whatsapp: ""
   },
@@ -596,7 +596,7 @@ function renderSponsors() {
       ${sponsor.instagram ? `</a>` : `</div>`}
       <div class="sponsor-card-body">
         <h3>${sponsor.name}</h3>
-        <p>${sponsor.description}</p>
+        ${sponsor.description ? `<p>${sponsor.description}</p>` : ``}
         <div class="sponsor-links">
           ${sponsor.instagram ? `<a href="${sponsor.instagram}" target="_blank" rel="noopener">Instagram</a>` : ``}
           ${sponsor.whatsapp ? `<a href="${sponsor.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>` : ``}
