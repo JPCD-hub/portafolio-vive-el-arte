@@ -393,12 +393,17 @@ const artists = [
   {
     id: 3,
     name: "Duvan Lasso",
-    role: "Fotografia",
-    photo: "",
-    description: "Fotografo invitado al evento Fotografia Burlesque. Su participacion estuvo enfocada en la direccion visual, el registro de modelo en vivo y la construccion de una atmosfera fotografica educativa y participativa.",
-    works: [],
-    instagram: "",
-    contact: ""
+    role: "Fotografo",
+    photo: "optimized/artists/duvan-lasso/artist.jpg",
+    description: "Duvan Lasso es un fotografo enfocado en la construccion de atmosferas visuales, el retrato y la direccion de imagen. Su trabajo combina sensibilidad por la luz, composicion y presencia escenica, creando registros que resaltan el caracter de cada modelo y la narrativa del momento. En Vive El Arte participa desde una mirada fotografica cercana, expresiva y cuidadosa del detalle.",
+    works: [
+      "optimized/artists/duvan-lasso/obra-1.jpg",
+      "optimized/artists/duvan-lasso/obra-2.jpg",
+      "optimized/artists/duvan-lasso/obra-3.jpg",
+      "optimized/artists/duvan-lasso/obra-4.jpg"
+    ],
+    instagram: "https://www.instagram.com/ph_duvan.lasso/",
+    contact: "https://wa.me/573103832865"
   },
   {
     id: 4,
