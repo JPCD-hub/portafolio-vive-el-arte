@@ -474,10 +474,10 @@ const sponsors = [
     whatsapp: "https://wa.me/573124291917"
   },
   {
-    name: "Ekiuilu",
-    logo: "",
+    name: "Eküülü",
+    logo: "optimized/sponsors/ekuulu.jpg",
     event: "Body Painting: Expresion, color, libertad",
-    instagram: "",
+    instagram: "https://www.instagram.com/ekuulualimento/",
     whatsapp: ""
   }
 ];
