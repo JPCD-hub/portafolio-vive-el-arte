@@ -849,9 +849,8 @@ a.sponsor-logo:hover {
 .artist-card-body h3 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.1rem, 3.15vw, 3.05rem);
-  line-height: 0.9;
-  overflow-wrap: break-word;
+  font-size: clamp(2rem, 2.65vw, 2.58rem);
+  line-height: 0.95;
 }
 
 .artist-detail {
