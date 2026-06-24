@@ -368,7 +368,7 @@ const artists = [
   {
     id: 1,
     name: "Daniel Gallego",
-    role: "Pintura en vivo",
+    role: "Pintor",
     photo: "optimized/artists/the-sick/artist.jpg",
     description: "Daniel Gallego, conocido artisticamente como The Sick, es un artista visual enfocado en la pintura figurativa, el retrato y la creacion de obras en vivo. Su trabajo explora atmosferas expresivas, personajes de fuerte presencia y composiciones cargadas de gesto, color e intensidad visual. En Vive El Arte participo con una pieza en vivo inspirada en el estilo barroco.",
     works: [
