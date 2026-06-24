@@ -775,7 +775,7 @@ a.sponsor-logo:hover {
 
 .artist-card {
   display: grid;
-  grid-template-columns: 0.72fr 1fr;
+  grid-template-columns: 160px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
   min-height: 210px;
@@ -807,7 +807,12 @@ a.sponsor-logo:hover {
 }
 
 .artist-photo {
+  width: 100%;
   aspect-ratio: 1;
+}
+
+.artist-card-body {
+  min-width: 0;
 }
 
 .artist-photo span,
