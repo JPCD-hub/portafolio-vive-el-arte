@@ -426,11 +426,19 @@ const artists = [
   {
     id: 5,
     name: "Anagrama Roma",
-    role: "Poesia",
-    photo: "",
-    description: "Descripcion pendiente por confirmar con el artista.",
-    works: [],
-    instagram: "",
+    role: "Canalizadora",
+    photo: "optimized/artists/anagrama-roma/artist.jpg",
+    description: "Yo soy canalizadora, acompanamiento espiritual y terapeutico, enfocada a procesos profundos de transformacion y en esos procesos el arte, la poesia, el maquillaje, el teatro han sido herramientas que he encontrado para atravesar esos momentos para la expansion de mi ser y de los demas.",
+    works: [
+      "optimized/artists/anagrama-roma/obra-1.png",
+      "optimized/artists/anagrama-roma/obra-2.png",
+      "optimized/artists/anagrama-roma/obra-3.png",
+      "optimized/artists/anagrama-roma/obra-4.png"
+    ],
+    instagram: "https://www.instagram.com/anagrama__roma/",
+    instagramLabel: "@anagrama__roma",
+    secondaryInstagram: "https://www.instagram.com/manuelaospinar/",
+    secondaryInstagramLabel: "@manuelaospinar",
     contact: ""
   },
   {
