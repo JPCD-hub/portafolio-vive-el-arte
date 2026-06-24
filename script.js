@@ -437,8 +437,54 @@ const artists = [
   }
 ];
 
+const sponsors = [
+  {
+    name: "Duvan Lasso",
+    logo: "optimized/sponsors/duvan-lasso.jpg",
+    event: "Fotografia Burlesque",
+    instagram: "https://www.instagram.com/ph_duvan.lasso/",
+    whatsapp: "https://wa.me/573103832865"
+  },
+  {
+    name: "Hechicera Arte Ancestral",
+    logo: "optimized/sponsors/hechicera.jpg",
+    event: "Fotografia Burlesque",
+    instagram: "",
+    whatsapp: ""
+  },
+  {
+    name: "Veronica Fernandez",
+    logo: "optimized/sponsors/veronica-fernandez.jpg",
+    event: "Fotografia Burlesque",
+    instagram: "",
+    whatsapp: ""
+  },
+  {
+    name: "Corzo",
+    logo: "optimized/sponsors/corzo.jpg",
+    event: "Fotografia Burlesque",
+    instagram: "",
+    whatsapp: ""
+  },
+  {
+    name: "Lolas Sexshop",
+    logo: "optimized/sponsors/lolas-sexshop.jpg",
+    event: "Shibari, la restriccion erotica",
+    instagram: "https://www.instagram.com/lolas_sexshop/",
+    whatsapp: ""
+  },
+  {
+    name: "Ekiuilu",
+    logo: "optimized/sponsors/ekiuilu.jpg",
+    event: "Body Painting: Expresion, color, libertad",
+    instagram: "",
+    whatsapp: ""
+  }
+];
+
 const eventsGrid = document.querySelector("#eventsGrid");
 const artistsGrid = document.querySelector("#artistsGrid");
+const sponsorsGrid = document.querySelector("#sponsorsGrid");
 const detailSection = document.querySelector("#detalleEvento");
 const artistDetailSection = document.querySelector("#detalleArtista");
 const detailImage = document.querySelector("#detailImage");
@@ -539,6 +585,24 @@ function renderArtists() {
         <h3>${artist.name}</h3>
       </div>
     </button>
+  `).join("");
+}
+
+function renderSponsors() {
+  sponsorsGrid.innerHTML = sponsors.map((sponsor) => `
+    <article class="sponsor-card">
+      <div class="sponsor-logo">
+        <img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">
+      </div>
+      <div class="sponsor-card-body">
+        <p>${sponsor.event}</p>
+        <h3>${sponsor.name}</h3>
+        <div class="sponsor-links">
+          ${sponsor.instagram ? `<a href="${sponsor.instagram}" target="_blank" rel="noopener">Instagram</a>` : `<span>Instagram pendiente</span>`}
+          ${sponsor.whatsapp ? `<a href="${sponsor.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>` : `<span>WhatsApp pendiente</span>`}
+        </div>
+      </div>
+    </article>
   `).join("");
 }
 
@@ -729,3 +793,4 @@ contactForm.addEventListener("submit", async (event) => {
 
 renderEvents();
 renderArtists();
+renderSponsors();

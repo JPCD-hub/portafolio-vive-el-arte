@@ -134,6 +134,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   max-width: 1180px;
   margin: 0 auto;
   padding: 18px 22px;
@@ -149,6 +150,7 @@ a {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 26px;
   color: var(--soft-ink);
   font-family: var(--condensed);
@@ -645,6 +647,96 @@ a {
 
 .artists-section {
   border-top: 1px solid var(--line-strong);
+}
+
+.sponsors-section {
+  border-top: 1px solid var(--line-strong);
+}
+
+.sponsors-intro {
+  max-width: 760px;
+  margin: -10px 0 32px;
+  color: var(--soft-ink);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sponsor-card {
+  display: grid;
+  grid-template-rows: 170px 1fr;
+  overflow: hidden;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--card-shadow);
+}
+
+.sponsor-logo {
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background:
+    radial-gradient(circle at 72% 20%, rgba(112, 22, 41, 0.16), transparent 42%),
+    var(--surface-soft);
+}
+
+.sponsor-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: saturate(0.98) contrast(1.02);
+}
+
+.sponsor-card-body {
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+  padding: 22px;
+}
+
+.sponsor-card-body p {
+  margin: 0;
+  color: var(--wine);
+  font: 800 0.76rem var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sponsor-card-body h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 0.92;
+}
+
+.sponsor-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.sponsor-links a,
+.sponsor-links span {
+  padding: 8px 11px;
+  color: var(--soft-ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font: 800 0.72rem var(--sans);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sponsor-links a:hover {
+  color: var(--cream);
+  background: var(--wine);
+  border-color: var(--wine);
 }
 
 .artists-grid {
@@ -1180,6 +1272,10 @@ a {
   .artists-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
@@ -1222,6 +1318,10 @@ a {
   }
 
   .artists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsors-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1338,6 +1438,10 @@ a {
 
   .artist-card {
     grid-template-columns: 1fr;
+  }
+
+  .sponsor-card {
+    grid-template-rows: 150px 1fr;
   }
 
   .artist-shell {
