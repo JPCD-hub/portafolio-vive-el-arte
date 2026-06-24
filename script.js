@@ -367,13 +367,18 @@ const events = [
 const artists = [
   {
     id: 1,
-    name: "Daniel - The Sick",
+    name: "Daniel Gallego",
     role: "Pintura en vivo",
-    photo: "",
-    description: "Artista invitado al evento Pintura al estilo barroco. Su participacion se centro en la creacion de una obra en vivo, trabajando el retrato, la atmosfera y la puesta en escena como parte de una experiencia contemplativa.",
-    works: [],
-    instagram: "",
-    contact: ""
+    photo: "optimized/artists/the-sick/artist.jpg",
+    description: "Daniel Gallego, conocido artisticamente como The Sick, es un artista visual enfocado en la pintura figurativa, el retrato y la creacion de obras en vivo. Su trabajo explora atmosferas expresivas, personajes de fuerte presencia y composiciones cargadas de gesto, color e intensidad visual. En Vive El Arte participo con una pieza en vivo inspirada en el estilo barroco.",
+    works: [
+      "optimized/artists/the-sick/obra-1.jpg",
+      "optimized/artists/the-sick/obra-2.jpg",
+      "optimized/artists/the-sick/obra-3.jpg",
+      "optimized/artists/the-sick/obra-4.jpg"
+    ],
+    instagram: "https://www.instagram.com/danielthesick1/",
+    contact: "https://wa.me/573053609685"
   },
   {
     id: 2,

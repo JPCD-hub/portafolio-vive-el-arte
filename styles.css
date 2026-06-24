@@ -598,11 +598,17 @@ a {
 }
 
 .artist-photo img,
-.artist-portrait img,
-.artist-work img {
+.artist-portrait img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.artist-work img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: center;
 }
 
