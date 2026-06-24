@@ -326,6 +326,8 @@ a {
   text-decoration: none;
   font-size: 0.82rem;
   text-transform: uppercase;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
@@ -1471,7 +1473,7 @@ a.sponsor-logo:hover {
   }
 
   .photo-gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .artist-card {
@@ -1502,5 +1504,342 @@ a.sponsor-logo:hover {
     grid-template-columns: 1fr;
     gap: 6px;
     border-radius: 24px;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .event-card:hover,
+  .artist-card:hover,
+  .sponsor-card:hover,
+  .button:hover,
+  .filter:hover,
+  .back-button:hover,
+  .theme-toggle:hover,
+  .load-more:hover,
+  .whatsapp-link:hover,
+  .gallery-item:hover,
+  .sponsor-links a:hover,
+  .artist-links a:hover,
+  a.sponsor-logo:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .event-card:active,
+  .artist-card:active,
+  .button:active,
+  .filter:active,
+  .load-more:active {
+    transform: scale(0.98);
+  }
+
+  .event-card:hover::before {
+    transform: scaleY(0.24);
+  }
+
+  .event-card:active::before {
+    transform: scaleY(1);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+
+  .brand {
+    font-size: 2.2rem;
+  }
+
+  .nav-links {
+    gap: 12px;
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+
+  .theme-toggle {
+    padding: 6px 8px 6px 6px;
+    font-size: 0.65rem;
+  }
+
+  .theme-toggle-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .hero {
+    padding-block: 48px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3.8rem, 20vw, 5.4rem);
+  }
+
+  .hero-content h1 span {
+    font-size: 1.8rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    margin-top: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-card {
+    min-height: 280px;
+    padding: 18px;
+    padding-top: 60px;
+  }
+
+  .card-label {
+    left: 18px;
+    top: 18px;
+    font-size: 0.7rem;
+  }
+
+  .hero-card::before {
+    width: 80px;
+    height: 120px;
+    inset: 16px 16px auto auto;
+  }
+
+  .hero-card::after {
+    right: 16px;
+    top: 30px;
+    width: 110px;
+    height: 12px;
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .intro-panel {
+    gap: 22px;
+  }
+
+  .event-card-body {
+    padding: 16px;
+  }
+
+  .event-card-body h3 {
+    font-size: 2.2rem;
+  }
+
+  .event-card-body p {
+    font-size: 0.88rem;
+  }
+
+  .event-index {
+    font-size: 1.4rem;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+  }
+
+  .artist-card {
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    padding: 12px;
+    min-height: auto;
+  }
+
+  .artist-photo {
+    aspect-ratio: 1;
+  }
+
+  .artist-card-body h3 {
+    font-size: 1.4rem;
+  }
+
+  .artist-card-body p {
+    font-size: 0.7rem;
+  }
+
+  .sponsor-card {
+    grid-template-rows: 150px 1fr;
+  }
+
+  .sponsor-card-body {
+    padding: 16px;
+  }
+
+  .sponsor-card-body h3 {
+    font-size: 1.6rem;
+  }
+
+  .sponsor-logo img {
+    max-height: 120px;
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .detail-visual {
+    min-height: 200px;
+    padding: 10px;
+  }
+
+  .detail-visual::before {
+    height: 22px;
+  }
+
+  .detail-layout {
+    gap: 20px;
+  }
+
+  .detail-shell {
+    padding: 16px;
+  }
+
+  .detail-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact {
+    padding-block: 48px;
+    gap: 28px;
+  }
+
+  .contact-form {
+    padding: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .whatsapp-link {
+    padding: 10px 16px;
+  }
+
+  .whatsapp-link span {
+    font-size: 1.8rem;
+  }
+
+  .whatsapp-link strong {
+    font-size: 0.85rem;
+  }
+
+  .gallery-block h3 {
+    font-size: 2.4rem;
+  }
+
+  .footer {
+    padding-block: 22px;
+    font-size: 0.72rem;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .artist-shell {
+    padding: 16px;
+  }
+
+  .artist-layout {
+    gap: 20px;
+  }
+
+  .artist-content h2 {
+    font-size: 2.6rem;
+  }
+
+  .artist-portrait {
+    min-height: 240px;
+  }
+
+  .detail-meta {
+    gap: 8px;
+  }
+
+  .detail-meta span {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(3.2rem, 18vw, 3.8rem);
+  }
+
+  .hero-content h1 span {
+    font-size: 1.5rem;
+  }
+
+  .event-card-body h3 {
+    font-size: 1.8rem;
+  }
+
+  .event-image-wrap {
+    aspect-ratio: 3 / 4;
+    padding: 8px;
+  }
+
+  .artist-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .artist-photo {
+    max-width: 140px;
+    margin: 0 auto;
+  }
+}
+
+@supports (padding: max(0px)) {
+  .site-header {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
+  .hero,
+  .section,
+  .event-detail,
+  .footer {
+    padding-left: max(22px, env(safe-area-inset-left));
+    padding-right: max(22px, env(safe-area-inset-right));
+  }
+
+  @media (max-width: 580px) {
+    .hero,
+    .section,
+    .event-detail,
+    .artist-detail,
+    .footer {
+      padding-left: max(18px, env(safe-area-inset-left));
+      padding-right: max(18px, env(safe-area-inset-right));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .site-header .nav {
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+    }
   }
 }

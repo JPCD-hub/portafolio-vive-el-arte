@@ -430,15 +430,15 @@ const artists = [
     photo: "optimized/artists/anagrama-roma/artist.jpg",
     description: "Yo soy canalizadora, acompanamiento espiritual y terapeutico, enfocada a procesos profundos de transformacion y en esos procesos el arte, la poesia, el maquillaje, el teatro han sido herramientas que he encontrado para atravesar esos momentos para la expansion de mi ser y de los demas.",
     works: [
-      "optimized/artists/anagrama-roma/obra-1.png",
-      "optimized/artists/anagrama-roma/obra-2.png",
-      "optimized/artists/anagrama-roma/obra-3.png",
-      "optimized/artists/anagrama-roma/obra-4.png"
+      "optimized/artists/anagrama-roma/obra-1.jpg",
+      "optimized/artists/anagrama-roma/obra-2.jpg",
+      "optimized/artists/anagrama-roma/obra-3.jpg",
+      "optimized/artists/anagrama-roma/obra-4.jpg"
     ],
     instagram: "https://www.instagram.com/anagrama__roma/",
     instagramLabel: "@anagrama__roma",
-    secondaryInstagram: "https://www.instagram.com/manuelaospinar/",
-    secondaryInstagramLabel: "@manuelaospinar",
+    secondaryInstagram: "https://www.instagram.com/tubrujita_roma/",
+    secondaryInstagramLabel: "@tubrujita_roma",
     contact: ""
   },
   {
