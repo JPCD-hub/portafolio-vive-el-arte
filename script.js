@@ -440,42 +440,42 @@ const artists = [
 const sponsors = [
   {
     name: "Duvan Lasso",
-    logo: "optimized/sponsors/duvan-lasso.jpg",
+    logo: "",
     event: "Fotografia Burlesque",
     instagram: "https://www.instagram.com/ph_duvan.lasso/",
     whatsapp: "https://wa.me/573103832865"
   },
   {
     name: "Hechicera Arte Ancestral",
-    logo: "optimized/sponsors/hechicera.jpg",
+    logo: "",
     event: "Fotografia Burlesque",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Veronica Fernandez",
-    logo: "optimized/sponsors/veronica-fernandez.jpg",
+    logo: "",
     event: "Fotografia Burlesque",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Corzo",
-    logo: "optimized/sponsors/corzo.jpg",
+    logo: "",
     event: "Fotografia Burlesque",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Lolas Sexshop",
-    logo: "optimized/sponsors/lolas-sexshop.jpg",
+    logo: "",
     event: "Shibari, la restriccion erotica",
     instagram: "https://www.instagram.com/lolas_sexshop/",
     whatsapp: ""
   },
   {
     name: "Ekiuilu",
-    logo: "optimized/sponsors/ekiuilu.jpg",
+    logo: "",
     event: "Body Painting: Expresion, color, libertad",
     instagram: "",
     whatsapp: ""
@@ -592,7 +592,7 @@ function renderSponsors() {
   sponsorsGrid.innerHTML = sponsors.map((sponsor) => `
     <article class="sponsor-card">
       ${sponsor.instagram ? `<a class="sponsor-logo" href="${sponsor.instagram}" target="_blank" rel="noopener" aria-label="Ver Instagram de ${sponsor.name}">` : `<div class="sponsor-logo">`}
-          <img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">
+        ${sponsor.logo ? `<img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">` : `<span>Logo pendiente</span>`}
       ${sponsor.instagram ? `</a>` : `</div>`}
       <div class="sponsor-card-body">
         <p>${sponsor.event}</p>

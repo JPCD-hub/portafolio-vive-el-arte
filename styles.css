@@ -701,6 +701,21 @@ a.sponsor-logo:hover {
   filter: saturate(0.98) contrast(1.02);
 }
 
+.sponsor-logo span {
+  display: grid;
+  width: calc(100% - 44px);
+  height: calc(100% - 44px);
+  place-items: center;
+  color: var(--wine);
+  background:
+    radial-gradient(circle at 72% 20%, rgba(112, 22, 41, 0.14), transparent 42%),
+    var(--surface);
+  border: 1px dashed rgba(112, 22, 41, 0.42);
+  font: 800 0.82rem var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .sponsor-card-body {
   display: grid;
   align-content: space-between;
