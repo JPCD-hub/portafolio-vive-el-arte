@@ -418,6 +418,9 @@ const artists = [
       "optimized/artists/mao-escruceria/obra-4.jpg"
     ],
     instagram: "https://www.instagram.com/sr.m.106",
+    instagramLabel: "@sr.m.106",
+    secondaryInstagram: "https://www.instagram.com/maoe.fotografia/",
+    secondaryInstagramLabel: "@maoe.fotografia",
     contact: "https://wa.me/573107671747"
   },
   {
@@ -633,7 +636,8 @@ function openArtistDetail(artistId) {
   artistName.textContent = artist.name;
   artistDescription.textContent = artist.description;
   artistLinks.innerHTML = `
-    ${artist.instagram ? `<a href="${artist.instagram}" target="_blank" rel="noopener">Instagram</a>` : `<span>Instagram pendiente</span>`}
+    ${artist.instagram ? `<a href="${artist.instagram}" target="_blank" rel="noopener">${artist.instagramLabel || "Instagram"}</a>` : `<span>Instagram pendiente</span>`}
+    ${artist.secondaryInstagram ? `<a href="${artist.secondaryInstagram}" target="_blank" rel="noopener">${artist.secondaryInstagramLabel || "Instagram"}</a>` : ``}
     ${artist.contact ? `<a href="${artist.contact}" target="_blank" rel="noopener">Contacto</a>` : `<a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">Contacto Vive El Arte</a>`}
   `;
   renderArtistWorks(artist);
