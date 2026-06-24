@@ -409,9 +409,14 @@ const artists = [
     id: 4,
     name: "Mao Escruceria",
     role: "Shibari",
-    photo: "",
-    description: "Artista invitado al evento Shibari, la restriccion erotica. Su practica aborda el cuerpo, la cuerda, la confianza y la composicion visual desde una mirada pedagogica, sensible y performativa.",
-    works: [],
+    photo: "optimized/artists/mao-escruceria/artist.jpg",
+    description: "Fotografo profesional y capacitador en sexualidades alternativas, con mas de 26 anos de experiencia explorando la sexualidad. Egresado de la universidad de Brevard en EEUU con doble titulacion: Fotografia y Liderazgo & Educacion por medio de la Experiencia. Graduado de la Universidad EAN como Administrador de Empresas. Se especializa en la fotografia erotica, usando la luz para revelar el erotismo del cuerpo femenino, resaltando su belleza natural. Miembro activo de la escena BDSM y SW en Colombia como dominante sensorial y kinbaku rigger.",
+    works: [
+      "optimized/artists/mao-escruceria/obra-1.jpg",
+      "optimized/artists/mao-escruceria/obra-2.jpg",
+      "optimized/artists/mao-escruceria/obra-3.jpg",
+      "optimized/artists/mao-escruceria/obra-4.jpg"
+    ],
     instagram: "",
     contact: ""
   },
