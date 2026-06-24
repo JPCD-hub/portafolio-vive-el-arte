@@ -764,11 +764,11 @@ contactForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const data = new FormData(contactForm);
-  const message = [
+  const message = encodeURIComponent([
     "Hola, soy " + data.get("nombre"),
     "Telefono: " + (data.get("telefono") || "No indicado"),
     "Mensaje: " + data.get("mensaje")
-  ].join("%0A");
+  ].join("\n"));
 
   if (FORMSPREE_ENDPOINT) {
     try {
