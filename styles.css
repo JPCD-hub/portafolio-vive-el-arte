@@ -1195,6 +1195,30 @@ a {
     padding: 20px;
   }
 
+  .artist-shell {
+    padding: 20px;
+  }
+
+  .artist-detail {
+    padding-bottom: 64px;
+  }
+
+  .artist-art-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .artist-work {
+    aspect-ratio: auto;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .artist-work img {
+    height: auto;
+    max-height: 78vh;
+  }
+
   .event-card-body h3 {
     font-size: 2.75rem;
   }
