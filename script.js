@@ -385,7 +385,7 @@ const artists = [
     name: "Vigoro",
     role: "Body painting",
     photo: "",
-    description: "Artista de body painting vinculado a una experiencia de pintura corporal en vivo. Su trabajo explora el cuerpo como lienzo, el color como lenguaje visual y la transformacion progresiva de la imagen frente al publico.",
+    description: "Descripcion pendiente por confirmar con el artista.",
     works: [],
     instagram: "",
     contact: ""
@@ -420,7 +420,7 @@ const artists = [
     name: "Anagrama Roma",
     role: "Poesia",
     photo: "",
-    description: "Artista de la palabra invitado al encuentro Miercoles Poesia. Su participacion representa el lugar de la lectura, la escucha y la escritura como formas de encuentro creativo dentro de Vive El Arte.",
+    description: "Descripcion pendiente por confirmar con el artista.",
     works: [],
     instagram: "",
     contact: ""
