@@ -646,7 +646,7 @@ function openArtistDetail(artistId) {
   artistLinks.innerHTML = `
     ${artist.instagram ? `<a href="${artist.instagram}" target="_blank" rel="noopener">${artist.instagramLabel || "Instagram"}</a>` : `<span>Instagram pendiente</span>`}
     ${artist.secondaryInstagram ? `<a href="${artist.secondaryInstagram}" target="_blank" rel="noopener">${artist.secondaryInstagramLabel || "Instagram"}</a>` : ``}
-    ${artist.contact ? `<a href="${artist.contact}" target="_blank" rel="noopener">Contacto</a>` : `<a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">Contacto Vive El Arte</a>`}
+    ${artist.contact ? `<a href="${artist.contact}" target="_blank" rel="noopener">Contacto</a>` : ``}
   `;
   renderArtistWorks(artist);
 
