@@ -812,6 +812,8 @@ a.sponsor-logo:hover {
 }
 
 .artist-card-body {
+  display: grid;
+  justify-items: center;
   min-width: 0;
   text-align: center;
 }
@@ -850,8 +852,10 @@ a.sponsor-logo:hover {
 .artist-card-body h3 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2rem, 2.65vw, 2.58rem);
-  line-height: 0.95;
+  font-size: clamp(1.86rem, 2.35vw, 2.28rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-align: center;
   text-wrap: balance;
 }
 
