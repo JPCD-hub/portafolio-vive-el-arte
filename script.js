@@ -441,42 +441,42 @@ const sponsors = [
   {
     name: "Duvan Lasso",
     logo: "",
-    event: "Fotografia Burlesque",
+    description: "Fotografo y creador visual enfocado en retrato, direccion de imagen y registro de experiencias artisticas.",
     instagram: "https://www.instagram.com/ph_duvan.lasso/",
     whatsapp: "https://wa.me/573103832865"
   },
   {
     name: "Hechicera Arte Ancestral",
     logo: "",
-    event: "Fotografia Burlesque",
+    description: "Emprendimiento de arte ancestral y piezas con identidad espiritual, ornamental y artesanal.",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Veronica Fernandez",
     logo: "",
-    event: "Fotografia Burlesque",
+    description: "Marca de styling y maquillaje enfocada en imagen personal, estetica escenica y produccion visual.",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Corzo",
     logo: "",
-    event: "Fotografia Burlesque",
+    description: "Emprendimiento local aliado de experiencias creativas, bienestar y encuentros culturales.",
     instagram: "",
     whatsapp: ""
   },
   {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
-    event: "Shibari, la restriccion erotica",
+    description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
     instagram: "https://www.instagram.com/lolas_sexshop/",
     whatsapp: "https://wa.me/573124291917"
   },
   {
     name: "Eküülü",
     logo: "optimized/sponsors/ekuulu.jpg",
-    event: "Body Painting: Expresion, color, libertad",
+    description: "Emprendimiento de alimento y propuestas naturales con una identidad fresca, organica y cercana.",
     instagram: "https://www.instagram.com/ekuulualimento/",
     whatsapp: ""
   }
@@ -595,8 +595,8 @@ function renderSponsors() {
         ${sponsor.logo ? `<img src="${sponsor.logo}" alt="Logo de ${sponsor.name}" loading="lazy" decoding="async">` : `<span>Logo pendiente</span>`}
       ${sponsor.instagram ? `</a>` : `</div>`}
       <div class="sponsor-card-body">
-        <p>${sponsor.event}</p>
         <h3>${sponsor.name}</h3>
+        <p>${sponsor.description}</p>
         <div class="sponsor-links">
           ${sponsor.instagram ? `<a href="${sponsor.instagram}" target="_blank" rel="noopener">Instagram</a>` : ``}
           ${sponsor.whatsapp ? `<a href="${sponsor.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>` : ``}
