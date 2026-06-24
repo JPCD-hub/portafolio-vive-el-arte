@@ -417,8 +417,8 @@ const artists = [
       "optimized/artists/mao-escruceria/obra-3.jpg",
       "optimized/artists/mao-escruceria/obra-4.jpg"
     ],
-    instagram: "",
-    contact: ""
+    instagram: "https://www.instagram.com/sr.m.106",
+    contact: "https://wa.me/573107671747"
   },
   {
     id: 5,
