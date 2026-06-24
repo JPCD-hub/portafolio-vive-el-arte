@@ -827,7 +827,7 @@ a.sponsor-logo:hover {
 .artist-portrait img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -849,8 +849,9 @@ a.sponsor-logo:hover {
 .artist-card-body h3 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-size: clamp(2.1rem, 3.15vw, 3.05rem);
   line-height: 0.9;
+  overflow-wrap: break-word;
 }
 
 .artist-detail {
