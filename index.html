@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700;900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260622-18">
+  <link rel="stylesheet" href="styles.css?v=20260622-19">
 </head>
 <body>
   <header class="site-header">
@@ -16,6 +16,7 @@
       <a class="brand" href="#inicio">Vive El Arte</a>
       <div class="nav-links">
         <a href="#eventos">Eventos</a>
+        <a href="#artistas">Artistas</a>
         <a href="#contacto">Contacto</a>
       </div>
     </nav>
@@ -83,6 +84,34 @@
       </div>
     </section>
 
+    <section class="section artists-section" id="artistas">
+      <div class="section-heading">
+        <p class="eyebrow">Directorio creativo</p>
+        <h2>Directorio de artistas</h2>
+      </div>
+
+      <div class="artists-grid" id="artistsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="artist-detail" id="detalleArtista" hidden>
+      <div class="artist-shell">
+        <button class="back-button" type="button" id="backToArtists">Volver al directorio</button>
+        <div class="artist-layout">
+          <div class="artist-portrait" id="artistPortrait" aria-hidden="true"></div>
+          <div class="artist-content">
+            <p class="eyebrow" id="artistRole"></p>
+            <h2 id="artistName"></h2>
+            <p id="artistDescription"></p>
+            <div class="artist-links" id="artistLinks"></div>
+          </div>
+        </div>
+        <div class="gallery-block">
+          <h3>Obra del artista</h3>
+          <div class="artist-art-grid" id="artistArtGrid"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contacto">
       <div class="contact-copy">
         <p class="eyebrow">Contacto</p>
@@ -120,6 +149,6 @@
     <p>Eventos, arte y memoria fotografica.</p>
   </footer>
 
-  <script src="script.js?v=20260622-14"></script>
+  <script src="script.js?v=20260622-16"></script>
 </body>
 </html>

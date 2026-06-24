@@ -541,6 +541,168 @@ a {
   padding-block: 34px 84px;
 }
 
+.artists-section {
+  border-top: 1px solid var(--line-strong);
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.artist-card {
+  display: grid;
+  grid-template-columns: 0.72fr 1fr;
+  gap: 18px;
+  align-items: center;
+  min-height: 210px;
+  padding: 18px;
+  text-align: left;
+  color: var(--ink);
+  background: rgba(255, 250, 242, 0.68);
+  border: 1px solid var(--line-strong);
+  cursor: pointer;
+  box-shadow: 0 18px 52px rgba(30, 18, 12, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(112, 22, 41, 0.5);
+  box-shadow: 0 28px 72px rgba(30, 18, 12, 0.14);
+}
+
+.artist-photo,
+.artist-portrait {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(112, 22, 41, 0.18), transparent 46%),
+    linear-gradient(135deg, rgba(255, 250, 242, 0.9), rgba(229, 221, 210, 0.78));
+  border: 1px dashed rgba(112, 22, 41, 0.36);
+}
+
+.artist-photo {
+  aspect-ratio: 1;
+}
+
+.artist-photo span,
+.artist-portrait span {
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
+  font-weight: 700;
+  color: var(--wine);
+}
+
+.artist-photo img,
+.artist-portrait img,
+.artist-work img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.artist-card-body p {
+  margin: 0 0 8px;
+  color: var(--wine);
+  font: 800 0.78rem var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.artist-card-body h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 0.9;
+}
+
+.artist-detail {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 22px 84px;
+}
+
+.artist-shell {
+  padding: 30px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 250, 242, 0.74);
+  box-shadow: var(--shadow);
+}
+
+.artist-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.artist-portrait {
+  min-height: 420px;
+}
+
+.artist-content h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 7vw, 6.2rem);
+  line-height: 0.9;
+}
+
+.artist-content p:not(.eyebrow) {
+  color: var(--soft-ink);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.artist-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.artist-links a,
+.artist-links span {
+  padding: 9px 13px;
+  color: var(--soft-ink);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font: 800 0.78rem var(--sans);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.artist-links a:hover {
+  color: var(--cream);
+  background: var(--wine);
+  border-color: var(--wine);
+}
+
+.artist-art-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.artist-work {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  color: var(--wine);
+  background: rgba(229, 221, 210, 0.72);
+  border: 1px dashed rgba(112, 22, 41, 0.36);
+  font: 800 0.78rem var(--sans);
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .detail-shell {
   position: relative;
   padding: 30px;
@@ -906,12 +1068,17 @@ a {
   .events-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .artists-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 900px) {
   .hero,
   .intro-panel,
   .detail-layout,
+  .artist-layout,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -946,6 +1113,18 @@ a {
     gap: 28px;
   }
 
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-portrait {
+    min-height: 320px;
+  }
+
+  .artist-art-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .event-image-wrap {
     aspect-ratio: 4 / 5.65;
     padding: 12px;
@@ -967,6 +1146,7 @@ a {
   .hero,
   .section,
   .event-detail,
+  .artist-detail,
   .footer {
     padding-inline: 18px;
   }
@@ -1021,6 +1201,18 @@ a {
   }
 
   .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-card {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-shell {
+    padding: 22px;
+  }
+
+  .artist-art-grid {
     grid-template-columns: 1fr;
   }
 

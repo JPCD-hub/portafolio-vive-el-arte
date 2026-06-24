@@ -364,15 +364,87 @@ const events = [
   }
 ];
 
+const artists = [
+  {
+    id: 1,
+    name: "Daniel - The Sick",
+    role: "Pintura en vivo",
+    photo: "",
+    description: "Artista invitado al evento Pintura al estilo barroco. Su participacion se centro en la creacion de una obra en vivo, trabajando el retrato, la atmosfera y la puesta en escena como parte de una experiencia contemplativa.",
+    works: [],
+    instagram: "",
+    contact: ""
+  },
+  {
+    id: 2,
+    name: "Vigoro",
+    role: "Body painting",
+    photo: "",
+    description: "Artista de body painting vinculado a una experiencia de pintura corporal en vivo. Su trabajo explora el cuerpo como lienzo, el color como lenguaje visual y la transformacion progresiva de la imagen frente al publico.",
+    works: [],
+    instagram: "",
+    contact: ""
+  },
+  {
+    id: 3,
+    name: "Duvan Lasso",
+    role: "Fotografia",
+    photo: "",
+    description: "Fotografo invitado al evento Fotografia Burlesque. Su participacion estuvo enfocada en la direccion visual, el registro de modelo en vivo y la construccion de una atmosfera fotografica educativa y participativa.",
+    works: [],
+    instagram: "",
+    contact: ""
+  },
+  {
+    id: 4,
+    name: "Mao Escruceria",
+    role: "Shibari",
+    photo: "",
+    description: "Artista invitado al evento Shibari, la restriccion erotica. Su practica aborda el cuerpo, la cuerda, la confianza y la composicion visual desde una mirada pedagogica, sensible y performativa.",
+    works: [],
+    instagram: "",
+    contact: ""
+  },
+  {
+    id: 5,
+    name: "Anagrama Roma",
+    role: "Poesia",
+    photo: "",
+    description: "Artista de la palabra invitado al encuentro Miercoles Poesia. Su participacion representa el lugar de la lectura, la escucha y la escritura como formas de encuentro creativo dentro de Vive El Arte.",
+    works: [],
+    instagram: "",
+    contact: ""
+  },
+  {
+    id: 6,
+    name: "Natalia Rojas",
+    role: "Body painting",
+    photo: "",
+    description: "Artista invitada al evento Body Painting. Su propuesta se relaciona con la expresion corporal, el color intenso y la creacion en vivo como experiencia visual compartida con la comunidad.",
+    works: [],
+    instagram: "",
+    contact: ""
+  }
+];
+
 const eventsGrid = document.querySelector("#eventsGrid");
+const artistsGrid = document.querySelector("#artistsGrid");
 const detailSection = document.querySelector("#detalleEvento");
+const artistDetailSection = document.querySelector("#detalleArtista");
 const detailImage = document.querySelector("#detailImage");
 const detailNumber = document.querySelector("#detailNumber");
 const detailTitle = document.querySelector("#detailTitle");
 const detailDescription = document.querySelector("#detailDescription");
 const detailDate = document.querySelector("#detailDate");
+const artistPortrait = document.querySelector("#artistPortrait");
+const artistRole = document.querySelector("#artistRole");
+const artistName = document.querySelector("#artistName");
+const artistDescription = document.querySelector("#artistDescription");
+const artistLinks = document.querySelector("#artistLinks");
+const artistArtGrid = document.querySelector("#artistArtGrid");
 const photoGallery = document.querySelector("#photoGallery");
 const backToEvents = document.querySelector("#backToEvents");
+const backToArtists = document.querySelector("#backToArtists");
 const contactForm = document.querySelector("#contactForm");
 const formNote = document.querySelector("#formNote");
 const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .contact-copy, .contact-form");
@@ -404,6 +476,60 @@ function renderEvents() {
       </div>
     </button>
   `).join("");
+}
+
+function getInitials(name) {
+  return name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+}
+
+function renderArtists() {
+  artistsGrid.innerHTML = artists.map((artist) => `
+    <button class="artist-card" type="button" data-artist-id="${artist.id}" aria-label="Ver perfil de ${artist.name}">
+      <div class="artist-photo">
+        ${artist.photo ? `<img src="${artist.photo}" alt="Foto de ${artist.name}" loading="lazy" decoding="async">` : `<span>${getInitials(artist.name)}</span>`}
+      </div>
+      <div class="artist-card-body">
+        <p>${artist.role}</p>
+        <h3>${artist.name}</h3>
+      </div>
+    </button>
+  `).join("");
+}
+
+function renderArtistWorks(artist) {
+  const works = artist.works.length > 0 ? artist.works : Array.from({ length: 4 }, (_, index) => null);
+
+  artistArtGrid.innerHTML = works.map((work, index) => `
+    <div class="artist-work">
+      ${work ? `<img src="${work}" alt="Obra ${index + 1} de ${artist.name}" loading="lazy" decoding="async">` : `<span>Obra ${index + 1}</span>`}
+    </div>
+  `).join("");
+}
+
+function openArtistDetail(artistId) {
+  const artist = artists.find((item) => item.id === Number(artistId));
+  if (!artist) return;
+
+  artistPortrait.innerHTML = artist.photo
+    ? `<img src="${artist.photo}" alt="Foto de ${artist.name}">`
+    : `<span>${getInitials(artist.name)}</span>`;
+  artistRole.textContent = artist.role;
+  artistName.textContent = artist.name;
+  artistDescription.textContent = artist.description;
+  artistLinks.innerHTML = `
+    ${artist.instagram ? `<a href="${artist.instagram}" target="_blank" rel="noopener">Instagram</a>` : `<span>Instagram pendiente</span>`}
+    ${artist.contact ? `<a href="${artist.contact}" target="_blank" rel="noopener">Contacto</a>` : `<a href="https://wa.me/${WHATSAPP_NUMBER}" target="_blank" rel="noopener">Contacto Vive El Arte</a>`}
+  `;
+  renderArtistWorks(artist);
+
+  artistDetailSection.hidden = false;
+  artistDetailSection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function findGalleryImages(folder) {
@@ -507,6 +633,12 @@ eventsGrid.addEventListener("click", (event) => {
   openEventDetail(card.dataset.eventId);
 });
 
+artistsGrid.addEventListener("click", (event) => {
+  const card = event.target.closest(".artist-card");
+  if (!card) return;
+  openArtistDetail(card.dataset.artistId);
+});
+
 photoGallery.addEventListener("click", (event) => {
   if (!event.target.closest("#loadMoreGallery")) return;
   visibleGalleryCount += GALLERY_BATCH_SIZE;
@@ -516,6 +648,11 @@ photoGallery.addEventListener("click", (event) => {
 backToEvents.addEventListener("click", () => {
   detailSection.hidden = true;
   document.querySelector("#eventos").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+backToArtists.addEventListener("click", () => {
+  artistDetailSection.hidden = true;
+  document.querySelector("#artistas").scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
 contactForm.addEventListener("submit", async (event) => {
@@ -551,3 +688,4 @@ contactForm.addEventListener("submit", async (event) => {
 });
 
 renderEvents();
+renderArtists();
