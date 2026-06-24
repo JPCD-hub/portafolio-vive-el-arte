@@ -426,7 +426,7 @@ const artists = [
   {
     id: 5,
     name: "Anagrama Roma",
-    role: "Poeta",
+    role: "Poeta y Canalizadora",
     photo: "optimized/artists/anagrama-roma/artist.jpg",
     description: "Yo soy canalizadora, acompanamiento espiritual y terapeutico, enfocada a procesos profundos de transformacion y en esos procesos el arte, la poesia, el maquillaje, el teatro han sido herramientas que he encontrado para atravesar esos momentos para la expansion de mi ser y de los demas.",
     works: [
