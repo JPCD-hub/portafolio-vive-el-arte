@@ -680,7 +680,7 @@ a {
 .sponsor-logo {
   display: grid;
   place-items: center;
-  padding: 0;
+  padding: 18px;
   text-decoration: none;
   background: var(--surface-soft);
 }
@@ -695,9 +695,11 @@ a.sponsor-logo:hover {
 }
 
 .sponsor-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
   filter: saturate(0.98) contrast(1.02);
 }
 

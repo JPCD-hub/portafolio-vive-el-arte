@@ -468,10 +468,10 @@ const sponsors = [
   },
   {
     name: "Lolas Sexshop",
-    logo: "",
+    logo: "optimized/sponsors/lolas-sexshop.jpg",
     event: "Shibari, la restriccion erotica",
     instagram: "https://www.instagram.com/lolas_sexshop/",
-    whatsapp: ""
+    whatsapp: "https://wa.me/573124291917"
   },
   {
     name: "Ekiuilu",
