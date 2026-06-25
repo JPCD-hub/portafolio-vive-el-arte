@@ -456,7 +456,7 @@ const artists = [
 const sponsors = [
   {
     name: "Duvan Lasso",
-    logo: "optimized/sponsors/duvan-lasso.jpg",
+    logo: "optimized/sponsors/duvan-lasso-logo.jpg",
     description: "Fotografo aliado que aporta registro visual, retrato y memoria fotografica a los eventos de Vive El Arte.",
     instagram: "https://www.instagram.com/ph_duvan.lasso/",
     whatsapp: "https://wa.me/573103832865"
