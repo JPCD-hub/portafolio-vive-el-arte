@@ -462,27 +462,6 @@ const sponsors = [
     whatsapp: "https://wa.me/573103832865"
   },
   {
-    name: "Hechicera Arte Ancestral",
-    logo: "",
-    description: "",
-    instagram: "",
-    whatsapp: ""
-  },
-  {
-    name: "Veronica Fernandez",
-    logo: "",
-    description: "",
-    instagram: "",
-    whatsapp: ""
-  },
-  {
-    name: "Corzo",
-    logo: "",
-    description: "",
-    instagram: "",
-    whatsapp: ""
-  },
-  {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
     description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
