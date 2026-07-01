@@ -462,6 +462,13 @@ const sponsors = [
     whatsapp: "https://wa.me/573103832865"
   },
   {
+    name: "Lumbre Ancestral",
+    logo: "optimized/sponsors/lumbre-ancestral.jpg",
+    description: "Empresa artesanal de velas aromatizantes fundada por Laura en Pereira. Nacimos al ver a nuestras madres darlo todo sin darse 20 minutos para ellas. Producimos rituales reales de 40 dias, no wellness de Instagram.",
+    instagram: "https://www.instagram.com/lumbreancestral_/",
+    whatsapp: ""
+  },
+  {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
     description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
