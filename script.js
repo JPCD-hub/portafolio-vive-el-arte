@@ -445,9 +445,14 @@ const artists = [
     id: 6,
     name: "Natalia Rojas",
     role: "Body painting",
-    photo: "",
-    description: "Artista invitada al evento Body Painting. Su propuesta se relaciona con la expresion corporal, el color intenso y la creacion en vivo como experiencia visual compartida con la comunidad.",
-    works: [],
+    photo: "optimized/artists/natalia-rojas/artist.jpg",
+    description: "Artista invitada al evento Body Painting. Su propuesta se relaciona con la expresion corporal, el color intenso y sus maquillajes artisticos.",
+    works: [
+      "optimized/artists/natalia-rojas/obra-1.jpg",
+      "optimized/artists/natalia-rojas/obra-2.jpg",
+      "optimized/artists/natalia-rojas/obra-3.jpg",
+      "optimized/artists/natalia-rojas/obra-4.jpg"
+    ],
     instagram: "",
     contact: ""
   }
