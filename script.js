@@ -463,7 +463,7 @@ const sponsors = [
   },
   {
     name: "Lumbre Ancestral",
-    logo: "optimized/sponsors/lumbre-ancestral.jpg",
+    logo: "optimized/sponsors/lumbre-ancestral-logo.jpg",
     description: "Empresa artesanal de velas aromatizantes fundada por Laura en Pereira. Nacimos al ver a nuestras madres darlo todo sin darse 20 minutos para ellas. Producimos rituales reales de 40 dias, no wellness de Instagram.",
     instagram: "https://www.instagram.com/lumbreancestral_/",
     whatsapp: ""
