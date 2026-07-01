@@ -453,7 +453,8 @@ const artists = [
       "optimized/artists/natalia-rojas/obra-3.jpg",
       "optimized/artists/natalia-rojas/obra-4.jpg"
     ],
-    instagram: "",
+    instagram: "https://www.instagram.com/rojascpena/",
+    instagramLabel: "@rojascpena",
     contact: ""
   }
 ];
