@@ -383,7 +383,7 @@ const artists = [
   {
     id: 2,
     name: "Vigoro",
-    role: "Body painting",
+    role: "Tatuador",
     photo: "optimized/artists/vigoro/artist.jpg",
     description: "Descripcion pendiente por confirmar con el artista.",
     works: [],
