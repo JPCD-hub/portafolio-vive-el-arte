@@ -476,7 +476,7 @@ const sponsors = [
   },
   {
     name: "Tatiana Agudelo",
-    logo: "optimized/sponsors/tatiana-agudelo.jpg",
+    logo: "optimized/sponsors/tatiana-agudelo.jpg?v=20260702-2",
     description: "Artista visual enfocada en dibujo, pintura y creacion manual, con una propuesta grafica de trazo personal.",
     instagram: "https://www.instagram.com/tatianaagudelo.art/",
     whatsapp: ""
