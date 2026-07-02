@@ -475,6 +475,13 @@ const sponsors = [
     whatsapp: ""
   },
   {
+    name: "Tatiana Agudelo",
+    logo: "optimized/sponsors/tatiana-agudelo.jpg",
+    description: "Artista visual enfocada en dibujo, pintura y creacion manual, con una propuesta grafica de trazo personal.",
+    instagram: "https://www.instagram.com/tatianaagudelo.art/",
+    whatsapp: ""
+  },
+  {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
     description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
