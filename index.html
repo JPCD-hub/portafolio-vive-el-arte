@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Vive El Arte</title>
+  <meta name="description" content="Portafolio de eventos realizados por Vive El Arte con fichas de evento, registros fotograficos y contacto.">
+  <script>
+    (() => {
+      let savedTheme = null;
+      try {
+        savedTheme = localStorage.getItem("viveElArteTheme");
+      } catch (error) {}
+      const theme = savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;700;900&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20260702-1">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio">Vive El Arte</a>
+      <div class="nav-links">
+        <a href="#eventos">Eventos</a>
+        <a href="#artistas">Artistas</a>
+        <a href="#patrocinadores">Patrocinadores</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="Activar modo oscuro" aria-pressed="false">
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+        <span class="theme-toggle-text">Oscuro</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">Portafolio de eventos</p>
+        <h1><span>Vive El</span> Arte</h1>
+        <p class="hero-text">Un espacio que fue creado con el fin de generar vitrina y difusion para las distintas expresiones artisticas de nuestra ciudad.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#eventos">Ver eventos</a>
+          <a class="button secondary" href="https://wa.me/573104899379" target="_blank" rel="noopener">Contactar por WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Resumen del portafolio">
+        <p class="card-label">Archivo creativo</p>
+        <a class="live-photo-placeholder" href="https://www.instagram.com/livepodcastcafe/" target="_blank" rel="noopener" aria-label="Ver Instagram de Live Podcast Cafe">
+          <img src="optimized/hero/live-podcast.jpg" alt="Fachada de Live Podcast" loading="eager" decoding="async">
+        </a>
+        <p>Eventos contemplativos educativos y participativos.</p>
+      </div>
+    </section>
+
+    <section class="section intro-panel" aria-label="Descripcion del proyecto">
+      <div>
+        <p class="eyebrow">Memoria cultural</p>
+        <h2>Una vitrina para la expresion artistica local</h2>
+      </div>
+      <p>Estos se realizan cada miercoles con una demostracion diferente cada vez. Situados en el centro de Pereira.</p>
+    </section>
+
+    <section class="section" id="eventos">
+      <div class="section-heading">
+        <p class="eyebrow">Eventos realizados</p>
+        <h2>Eventos del portafolio</h2>
+      </div>
+
+      <div class="events-grid" id="eventsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="event-detail" id="detalleEvento" hidden>
+      <div class="detail-shell">
+        <button class="back-button" type="button" id="backToEvents">Volver a todos los eventos</button>
+        <div class="detail-layout">
+          <div class="detail-visual" aria-hidden="true">
+            <img id="detailImage" src="" alt="">
+            <span id="detailNumber"></span>
+            <p>Ficha de evento</p>
+          </div>
+          <div class="detail-content">
+            <h2 id="detailTitle"></h2>
+            <p id="detailDescription"></p>
+            <div class="detail-meta">
+              <span id="detailDate"></span>
+              <span>Portafolio Vive El Arte</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-block">
+          <h3>Registro fotografico</h3>
+          <div class="photo-gallery" id="photoGallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section artists-section" id="artistas">
+      <div class="section-heading">
+        <p class="eyebrow">Directorio creativo</p>
+        <h2>Directorio de artistas</h2>
+      </div>
+
+      <div class="artists-grid" id="artistsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="artist-detail" id="detalleArtista" hidden>
+      <div class="artist-shell">
+        <button class="back-button" type="button" id="backToArtists">Volver al directorio</button>
+        <div class="artist-layout">
+          <div class="artist-portrait" id="artistPortrait" aria-hidden="true"></div>
+          <div class="artist-content">
+            <p class="eyebrow" id="artistRole"></p>
+            <h2 id="artistName"></h2>
+            <p id="artistDescription"></p>
+            <div class="artist-links" id="artistLinks"></div>
+          </div>
+        </div>
+        <div class="gallery-block">
+          <h3>Obra del artista</h3>
+          <div class="artist-art-grid" id="artistArtGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sponsors-section" id="patrocinadores">
+      <div class="section-heading">
+        <p class="eyebrow">Aliados creativos</p>
+        <h2>Patrocinadores</h2>
+      </div>
+
+      <p class="sponsors-intro">Marcas y aliados que han apoyado los eventos de Vive El Arte. Los contactos se muestran cuando aparecen confirmados en los flyers.</p>
+      <div class="sponsors-grid" id="sponsorsGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section contact" id="contacto">
+      <div class="contact-copy">
+        <p class="eyebrow">Contacto</p>
+        <h2>Hablemos de tu proximo evento</h2>
+        <p>Escribenos para cotizaciones, alianzas, invitaciones o para ampliar la informacion de algun evento del portafolio.</p>
+        <div class="contact-lines">
+          <a class="whatsapp-link" href="https://wa.me/573104899379" target="_blank" rel="noopener">
+            <span>WhatsApp</span>
+            <strong>310 4899379</strong>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" action="" method="POST">
+        <label>
+          Nombre
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+        </label>
+        <label>
+          Telefono
+          <input type="tel" name="telefono" inputmode="tel" placeholder="Tu numero de contacto">
+        </label>
+        <label>
+          Mensaje
+          <textarea name="mensaje" rows="5" placeholder="Cuentanos que necesitas" required></textarea>
+        </label>
+        <button class="button primary" type="submit">Enviar mensaje</button>
+        <p class="form-note" id="formNote">El formulario abre WhatsApp con el mensaje escrito.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Portafolio Vive El Arte</p>
+    <p>Eventos, arte y memoria fotografica.</p>
+  </footer>
+
+  <script src="script.js?v=20260702-2"></script>
+</body>
+</html>
