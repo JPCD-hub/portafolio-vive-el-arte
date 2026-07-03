@@ -483,7 +483,7 @@ const sponsors = [
   },
   {
     name: "Divina Creacion",
-    logo: "optimized/sponsors/divina-creacion-logo.jpg?v=20260703-1",
+    logo: "optimized/sponsors/divina-creacion-logo.jpg?v=20260703-2",
     description: "Casa de plantas y flores que acerca a las personas al mundo natural con plantas, flores y arreglos personalizados que transmiten vida, armonia y belleza.",
     instagram: "https://www.instagram.com/divcreat/",
     whatsapp: "https://wa.me/573003418506"
