@@ -35,6 +35,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             --exclude='Anagrama' \
+            --exclude='Divina Creacion' \
             --exclude='Duvan Lasso' \
             --exclude='Foto live podcast' \
             --exclude='Lumbre Ancestral' \

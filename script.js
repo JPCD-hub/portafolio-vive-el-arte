@@ -482,6 +482,13 @@ const sponsors = [
     whatsapp: ""
   },
   {
+    name: "Divina Creacion",
+    logo: "optimized/sponsors/divina-creacion-logo.jpg",
+    description: "Casa de plantas y flores que acerca a las personas al mundo natural con plantas, flores y arreglos personalizados que transmiten vida, armonia y belleza.",
+    instagram: "https://www.instagram.com/divcreat/",
+    whatsapp: "https://wa.me/573003418506"
+  },
+  {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
     description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
