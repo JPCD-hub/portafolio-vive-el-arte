@@ -484,7 +484,7 @@ const sponsors = [
   {
     name: "Divina Creacion",
     logo: "optimized/sponsors/divina-creacion-logo.jpg?v=20260703-3",
-    description: "Casa de plantas y flores que acerca a las personas al mundo natural con plantas, flores y arreglos personalizados que transmiten vida, armonia y belleza.",
+    description: "En Divina Creacion trabajamos con pasion cada dia para acercar a las personas al mundo natural, ofreciendo plantas, flores y arreglos personalizados que transmiten vida, armonia y belleza. Nuestra mision es brindar un servicio calido, transparente y comprometido, guiado por la confianza, el respeto y el amor por lo que hacemos. Nos esforzamos por mantener relaciones duraderas con nuestros clientes, adaptandonos a sus necesidades, superando sus expectativas y siendo su primera eleccion hoy y siempre.",
     instagram: "https://www.instagram.com/divcreat/",
     whatsapp: "https://wa.me/573003418506"
   },
