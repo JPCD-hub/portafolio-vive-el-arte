@@ -489,6 +489,13 @@ const sponsors = [
     whatsapp: "https://wa.me/573003418506"
   },
   {
+    name: "Chocohappy",
+    logo: "optimized/sponsors/chocohappy-logo.jpg?v=20260703-1",
+    description: "Somos una pasteleria y reposteria alternativa cannabica que piensa no solo en la recreacion, sino tambien en la salud de nuestros clientes. Educamos y asesoramos sobre el uso responsable del cannabis para quitar el estigma. Llevamos 5 anos en el mercado, trabajamos con weed cultivada y el proceso de destilacion se hace de una manera artesanal, asertiva y segura.",
+    instagram: "https://www.instagram.com/chocohappy_pereira/",
+    whatsapp: "https://wa.me/573024998740"
+  },
+  {
     name: "Lolas Sexshop",
     logo: "optimized/sponsors/lolas-sexshop.jpg",
     description: "Tienda especializada en bienestar, erotismo consciente y productos para explorar la sensualidad con seguridad.",
