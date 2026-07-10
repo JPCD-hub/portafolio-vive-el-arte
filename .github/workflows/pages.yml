@@ -36,6 +36,7 @@ jobs:
             --exclude='.github' \
             --exclude='7' \
             --exclude='Anagrama' \
+            --exclude='Camila Valencia' \
             --exclude='Chocohappy' \
             --exclude='Divina Creacion' \
             --exclude='Duvan Lasso' \

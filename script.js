@@ -466,6 +466,20 @@ const artists = [
     instagram: "https://www.instagram.com/rojascpena/",
     instagramLabel: "@rojascpena",
     contact: ""
+  },
+  {
+    id: 7,
+    name: "Camila Valencia",
+    role: "Bailarina",
+    photo: "optimized/artists/camila-valencia/artist.jpg",
+    description: "Camila Valencia es una bailarina con formacion en danza urbana, contemporanea y folclorica. Su practica explora distintas maneras de habitar el cuerpo como un espacio de creacion, memoria y expresion. A traves de la integracion de la tecnica y la interpretacion, construye un lenguaje de movimiento versatil, autentico y consciente.",
+    works: [
+      "optimized/artists/camila-valencia/obra-1.jpg",
+      "optimized/artists/camila-valencia/obra-2.jpg"
+    ],
+    instagram: "https://www.instagram.com/_camila_valencia_/",
+    instagramLabel: "@_camila_valencia_",
+    contact: "https://wa.me/573116405516"
   }
 ];
 
