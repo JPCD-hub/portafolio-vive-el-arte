@@ -507,6 +507,17 @@ a {
   line-height: 1.8;
 }
 
+.detail-content .detail-subtitle {
+  margin: 8px 0 18px;
+  color: var(--wine);
+  font-family: var(--condensed);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
 .section-heading {
   max-width: 860px;
   margin-bottom: 26px;
@@ -653,6 +664,17 @@ a {
   color: var(--soft-ink);
   font-size: 0.96rem;
   line-height: 1.62;
+}
+
+.event-card-body .event-subtitle {
+  margin: -2px 0 12px;
+  color: var(--wine);
+  font-family: var(--condensed);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .event-card-body span {

@@ -365,6 +365,7 @@ const events = [
   {
     id: 7,
     title: "Baile",
+    subtitle: "Expresión en movimiento",
     category: "Especial",
     date: "8 de julio, 6:00 p.m.",
     image: "optimized/flyers/7.jpg",
@@ -543,6 +544,7 @@ const artistDetailSection = document.querySelector("#detalleArtista");
 const detailImage = document.querySelector("#detailImage");
 const detailNumber = document.querySelector("#detailNumber");
 const detailTitle = document.querySelector("#detailTitle");
+const detailSubtitle = document.querySelector("#detailSubtitle");
 const detailDescription = document.querySelector("#detailDescription");
 const detailDate = document.querySelector("#detailDate");
 const artistPortrait = document.querySelector("#artistPortrait");
@@ -610,6 +612,7 @@ function renderEvents() {
       <div class="event-card-body">
         <span class="event-index">${String(event.id).padStart(2, "0")}</span>
         <h3>${event.title}</h3>
+        ${event.subtitle ? `<p class="event-subtitle">${event.subtitle}</p>` : ``}
         <p>${event.summary}</p>
         <span>${event.date}</span>
       </div>
@@ -757,6 +760,8 @@ async function openEventDetail(eventId) {
   detailImage.alt = `Flyer de ${event.title}`;
   detailNumber.textContent = String(event.id).padStart(2, "0");
   detailTitle.textContent = event.title;
+  detailSubtitle.textContent = event.subtitle || "";
+  detailSubtitle.hidden = !event.subtitle;
   detailDescription.textContent = event.description;
   detailDate.textContent = event.date;
   photoGallery.innerHTML = `
