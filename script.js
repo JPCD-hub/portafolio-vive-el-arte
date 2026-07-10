@@ -361,6 +361,16 @@ const events = [
     ],
     summary: "Body painting de alto impacto visual con artistas en vivo, comunidad, fuego cromatico y musica.",
     description: "Body Painting fue una experiencia de expresion, color y libertad, centrada en el cuerpo como soporte artistico y en la pintura como acto performatico. La propuesta visual trabajo una paleta intensa, gestos organicos y una puesta en escena de gran fuerza cromatica. Las fotografias muestran el proceso, los detalles de la obra corporal, la interaccion con la comunidad y la energia de una noche pensada para contemplar el arte en vivo."
+  },
+  {
+    id: 7,
+    title: "Baile",
+    category: "Especial",
+    date: "8 de julio, 6:00 p.m.",
+    image: "optimized/flyers/7.jpg",
+    gallery: [],
+    summary: "Encuentro de baile contemporaneo, folclor y poema interpretado con Maria Camila Valencia.",
+    description: "Baile propone una noche para vivir el arte a traves del movimiento. El evento reune baile contemporaneo, folclor y poema interpretado en un espacio pensado para sumergirse, contemplar y conectar con el cuerpo como lenguaje escenico. Con Maria Camila Valencia como artista invitada, la experiencia combina presencia, musica en vivo, sensibilidad poetica y una copa de vino en Live Podcast Cafe Bar."
   }
 ];
 
@@ -753,7 +763,7 @@ async function openEventDetail(eventId) {
   photoGallery.innerHTML = `
     <div class="empty-gallery">
       <strong>Registro pendiente</strong>
-      <p>Para el evento 3, agrega las fotos en la carpeta 3 con nombres como 1.jpeg, 2.jpeg, 3.jpeg. Tambien se aceptan jpg, png y webp.</p>
+      <p>El registro fotografico de este evento se agregara proximamente.</p>
     </div>
   `;
   }
