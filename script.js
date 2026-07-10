@@ -471,11 +471,11 @@ const artists = [
     id: 7,
     name: "Camila Valencia",
     role: "Bailarina",
-    photo: "optimized/artists/camila-valencia/artist.jpg",
+    photo: "optimized/artists/camila-valencia/artist.jpg?v=20260710-3",
     description: "Camila Valencia es una bailarina con formacion en danza urbana, contemporanea y folclorica. Su practica explora distintas maneras de habitar el cuerpo como un espacio de creacion, memoria y expresion. A traves de la integracion de la tecnica y la interpretacion, construye un lenguaje de movimiento versatil, autentico y consciente.",
     works: [
-      "optimized/artists/camila-valencia/obra-1.jpg",
-      "optimized/artists/camila-valencia/obra-2.jpg"
+      "optimized/artists/camila-valencia/obra-1.jpg?v=20260710-3",
+      "optimized/artists/camila-valencia/obra-2.jpg?v=20260710-3"
     ],
     instagram: "https://www.instagram.com/_camila_valencia_/",
     instagramLabel: "@_camila_valencia_",
