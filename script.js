@@ -497,7 +497,7 @@ const sponsors = [
     logo: "optimized/sponsors/leonardo-suaza-logo.jpg?v=20260713-2",
     description: "Leonardo es fotografo y artista multidisciplinario, con experiencia creciente en la fotografia de eventos como conciertos, pasarelas y celebraciones sociales. Su estilo se distingue por la intensidad y espontaneidad de los momentos, trabajando principalmente con luz natural para mantener la autenticidad de cada escena. Paralelamente, desarrolla proyectos en macrofotografia y en otras areas artisticas como cine y tatuaje, consolidando una vision creativa integral.",
     instagram: "https://www.instagram.com/leonardo_saurio/",
-    whatsapp: ""
+    whatsapp: "https://wa.me/573177288115"
   },
   {
     name: "Lumbre Ancestral",
