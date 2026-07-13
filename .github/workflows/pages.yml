@@ -41,6 +41,7 @@ jobs:
             --exclude='Divina Creacion' \
             --exclude='Duvan Lasso' \
             --exclude='Foto live podcast' \
+            --exclude='Leonardo Suaza' \
             --exclude='Lumbre Ancestral' \
             --exclude='Mao Escruceria' \
             --exclude='Natalia Rojas' \

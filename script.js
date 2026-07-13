@@ -493,6 +493,13 @@ const sponsors = [
     whatsapp: "https://wa.me/573103832865"
   },
   {
+    name: "Leonardo Suaza",
+    logo: "optimized/sponsors/leonardo-suaza-logo.jpg?v=20260713-1",
+    description: "Leonardo es fotografo y artista multidisciplinario, con experiencia creciente en la fotografia de eventos como conciertos, pasarelas y celebraciones sociales. Su estilo se distingue por la intensidad y espontaneidad de los momentos, trabajando principalmente con luz natural para mantener la autenticidad de cada escena. Paralelamente, desarrolla proyectos en macrofotografia y en otras areas artisticas como cine y tatuaje, consolidando una vision creativa integral.",
+    instagram: "https://www.instagram.com/leonardo_saurio/",
+    whatsapp: ""
+  },
+  {
     name: "Lumbre Ancestral",
     logo: "optimized/sponsors/lumbre-ancestral-logo.jpg",
     description: "Empresa artesanal de velas aromatizantes fundada por Laura en Pereira. Nacimos al ver a nuestras madres darlo todo sin darse 20 minutos para ellas. Producimos rituales reales de 40 dias, no wellness de Instagram.",
