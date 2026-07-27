@@ -374,7 +374,6 @@ const events = [
       "7/LIVE 3.jpg.jpeg",
       "7/LIVE 4.jpg.jpeg",
       "7/LIVE 5.jpg.jpeg",
-      "7/LIVE 6.jpg.jpeg",
       "7/LIVE 7.jpg.jpeg",
       "7/LIVE 8.jpg.jpeg",
       "7/LIVE 11.jpg.jpeg",
@@ -390,7 +389,6 @@ const events = [
       "7/LIVE 22.jpg.jpeg",
       "7/LIVE 23.jpg.jpeg",
       "7/LIVE 25.jpg.jpeg",
-      "7/LIVE 27.jpg.jpeg",
       "7/LIVE 29.jpg.jpeg",
       "7/LIVE 31.jpg.jpeg"
     ],
@@ -496,11 +494,13 @@ const artists = [
     id: 7,
     name: "Camila Valencia",
     role: "Bailarina",
-    photo: "optimized/artists/camila-valencia/artist.jpg?v=20260710-3",
+    photo: "optimized/artists/camila-valencia/artist.jpg?v=20260727-1",
     description: "Camila Valencia es una bailarina con formacion en danza urbana, contemporanea y folclorica. Su practica explora distintas maneras de habitar el cuerpo como un espacio de creacion, memoria y expresion. A traves de la integracion de la tecnica y la interpretacion, construye un lenguaje de movimiento versatil, autentico y consciente.",
     works: [
-      "optimized/artists/camila-valencia/obra-1.jpg?v=20260710-3",
-      "optimized/artists/camila-valencia/obra-2.jpg?v=20260710-3"
+      "optimized/artists/camila-valencia/obra-1.jpg?v=20260727-1",
+      "optimized/artists/camila-valencia/obra-2.jpg?v=20260727-1",
+      "optimized/artists/camila-valencia/obra-3.jpg?v=20260727-1",
+      "optimized/artists/camila-valencia/obra-4.jpg?v=20260727-1"
     ],
     instagram: "https://www.instagram.com/_camila_valencia_/",
     instagramLabel: "@_camila_valencia_",
