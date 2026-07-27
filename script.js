@@ -500,7 +500,7 @@ const artists = [
       "optimized/artists/camila-valencia/obra-1.jpg?v=20260727-1",
       "optimized/artists/camila-valencia/obra-2.jpg?v=20260727-1",
       "optimized/artists/camila-valencia/obra-3.jpg?v=20260727-1",
-      "optimized/artists/camila-valencia/obra-4.jpg?v=20260727-1"
+      "optimized/artists/camila-valencia/obra-4.jpg?v=20260727-2"
     ],
     instagram: "https://www.instagram.com/_camila_valencia_/",
     instagramLabel: "@_camila_valencia_",
