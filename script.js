@@ -369,7 +369,31 @@ const events = [
     category: "Especial",
     date: "8 de julio, 6:00 p.m.",
     image: "optimized/flyers/7.jpg",
-    gallery: [],
+    gallery: [
+      "7/LIVE 1.jpg.jpeg",
+      "7/LIVE 3.jpg.jpeg",
+      "7/LIVE 4.jpg.jpeg",
+      "7/LIVE 5.jpg.jpeg",
+      "7/LIVE 6.jpg.jpeg",
+      "7/LIVE 7.jpg.jpeg",
+      "7/LIVE 8.jpg.jpeg",
+      "7/LIVE 11.jpg.jpeg",
+      "7/LIVE 12.jpg.jpeg",
+      "7/LIVE 13.jpg.jpeg",
+      "7/LIVE 14.jpg.jpeg",
+      "7/LIVE 15.jpg.jpeg",
+      "7/LIVE 16.jpg.jpeg",
+      "7/LIVE 17.jpg.jpeg",
+      "7/LIVE 18.jpg.jpeg",
+      "7/LIVE 19.jpg.jpeg",
+      "7/LIVE 21.jpg.jpeg",
+      "7/LIVE 22.jpg.jpeg",
+      "7/LIVE 23.jpg.jpeg",
+      "7/LIVE 25.jpg.jpeg",
+      "7/LIVE 27.jpg.jpeg",
+      "7/LIVE 29.jpg.jpeg",
+      "7/LIVE 31.jpg.jpeg"
+    ],
     summary: "Encuentro de baile contemporaneo, folclor y poema interpretado con Maria Camila Valencia.",
     description: "Baile propone una noche para vivir el arte a traves del movimiento. El evento reune baile contemporaneo, folclor y poema interpretado en un espacio pensado para sumergirse, contemplar y conectar con el cuerpo como lenguaje escenico. Con Maria Camila Valencia como artista invitada, la experiencia combina presencia, musica en vivo, sensibilidad poetica y una copa de vino en Live Podcast Cafe Bar."
   }
@@ -722,7 +746,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|2|3|4|5|6)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
+  return photo.replace(/^(1|2|3|4|5|6|7)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
 }
 
 function hydrateGalleryImages() {
