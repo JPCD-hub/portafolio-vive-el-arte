@@ -394,6 +394,44 @@ const events = [
     ],
     summary: "Encuentro de baile contemporaneo, folclor y poema interpretado con Maria Camila Valencia.",
     description: "Baile propone una noche para vivir el arte a traves del movimiento. El evento reune baile contemporaneo, folclor y poema interpretado en un espacio pensado para sumergirse, contemplar y conectar con el cuerpo como lenguaje escenico. Con Maria Camila Valencia como artista invitada, la experiencia combina presencia, musica en vivo, sensibilidad poetica y una copa de vino en Live Podcast Cafe Bar."
+  },
+  {
+    id: 8,
+    title: "Sierva: Monólogo de Alma Clara",
+    subtitle: "Palabra, poesía y música en vivo",
+    category: "General",
+    date: "22 de julio, desde las 6:00 p.m.",
+    image: "optimized/flyers/8.jpg",
+    gallery: [
+      "8/LIVE 32.jpg.jpeg",
+      "8/LIVE 33.jpg.jpeg",
+      "8/LIVE 34.jpg.jpeg",
+      "8/LIVE 35.jpg.jpeg",
+      "8/LIVE 36.jpg.jpeg",
+      "8/LIVE 37.jpg.jpeg",
+      "8/LIVE 38.jpg.jpeg",
+      "8/LIVE 39.jpg.jpeg",
+      "8/LIVE 40.jpg.jpeg",
+      "8/LIVE 41.jpg.jpeg",
+      "8/LIVE 42.jpg.jpeg",
+      "8/LIVE 43.jpg.jpeg",
+      "8/LIVE 44.jpg.jpeg",
+      "8/LIVE 45.jpg.jpeg",
+      "8/LIVE 46.jpg.jpeg",
+      "8/LIVE 48.jpg.jpeg",
+      "8/LIVE 49.jpg.jpeg",
+      "8/LIVE 51.jpg.jpeg",
+      "8/LIVE 52.jpg.jpeg",
+      "8/LIVE 54.jpg.jpeg",
+      "8/LIVE 55.jpg.jpeg",
+      "8/LIVE 57.jpg.jpeg",
+      "8/LIVE 58.jpg.jpeg",
+      "8/LIVE 59.jpg.jpeg",
+      "8/LIVE 60.jpg.jpeg",
+      "8/LIVE 61.jpg.jpeg"
+    ],
+    summary: "Monólogo íntimo con poesía, micrófono abierto y música en vivo para compartir la voz y la escucha.",
+    description: "Sierva: Monólogo de Alma Clara reunió palabra escénica, poesía y música en vivo en una noche de encuentro sensible. Luz Beyby Bedoya presentó una puesta en escena íntima y expresiva, acompañada por las voces poéticas de Alejandro Azag y Robinson Wagner. El micrófono abierto amplió la experiencia hacia la participación del público, creando un espacio cercano para escuchar relatos, versos y reflexiones entre artistas, asistentes y la comunidad de Live Podcast Café Bar."
   }
 ];
 
@@ -746,7 +784,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|2|3|4|5|6|7)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
+  return photo.replace(/^(1|2|3|4|5|6|7|8)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
 }
 
 function hydrateGalleryImages() {
