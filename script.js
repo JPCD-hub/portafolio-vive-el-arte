@@ -401,7 +401,7 @@ const events = [
     subtitle: "Palabra, poesía y música en vivo",
     category: "General",
     date: "22 de julio, desde las 6:00 p.m.",
-    image: "optimized/flyers/8.jpg",
+    image: "optimized/flyers/8.jpg?v=20260727-2",
     gallery: [
       "8/LIVE 32.jpg.jpeg",
       "8/LIVE 33.jpg.jpeg",
