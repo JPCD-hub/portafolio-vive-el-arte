@@ -34,7 +34,7 @@ jobs:
           rsync -a ./ "$RUNNER_TEMP/site/" \
             --exclude='.git' \
             --exclude='.github' \
-            --exclude='7' \
+            --exclude='/7/' \
             --exclude='Anagrama' \
             --exclude='Camila Valencia' \
             --exclude='Chocohappy' \
