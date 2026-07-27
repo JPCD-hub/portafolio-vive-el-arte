@@ -543,6 +543,7 @@ a {
 
 .event-card {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   display: grid;
   text-align: left;
@@ -565,19 +566,6 @@ a {
   transition: transform 240ms ease;
 }
 
-.event-card::after {
-  content: "";
-  position: absolute;
-  right: -62px;
-  bottom: -72px;
-  width: 190px;
-  height: 190px;
-  border: 1px solid rgba(17, 16, 15, 0.16);
-  border-radius: 999px;
-  pointer-events: none;
-  transition: transform 260ms ease, border-color 260ms ease;
-}
-
 .event-card:hover {
   transform: translateY(-6px);
   border-color: rgba(112, 22, 41, 0.58);
@@ -589,13 +577,10 @@ a {
   transform: scaleY(1);
 }
 
-.event-card:hover::after {
-  transform: translate(-16px, -12px) scale(1.08);
-  border-color: rgba(112, 22, 41, 0.36);
-}
-
 .event-image-wrap {
   position: relative;
+  z-index: 1;
+  isolation: isolate;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -610,6 +595,7 @@ a {
   content: "";
   position: absolute;
   inset: 7px;
+  z-index: 0;
   border: 1px solid var(--line-strong);
   pointer-events: none;
 }
@@ -623,18 +609,20 @@ a {
   border: 1px solid var(--line-strong);
   background: var(--cream);
   box-shadow: 0 14px 32px rgba(30, 18, 12, 0.14);
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
   object-position: center;
-  transition: transform 420ms ease, filter 420ms ease;
+  transition: filter 420ms ease;
 }
 
 .event-card:hover .event-image {
-  transform: scale(1.015);
   filter: saturate(1.04) contrast(1.02);
 }
 
 .event-card:hover .event-image-wrap::after {
-  opacity: 0.46;
+  opacity: 1;
 }
 
 .event-index {
@@ -1440,10 +1428,6 @@ a.sponsor-logo:hover {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .event-image-wrap {
-    aspect-ratio: 4 / 5.65;
-    padding: 12px;
-  }
 }
 
 @media (max-width: 580px) {
@@ -1900,11 +1884,6 @@ a.sponsor-logo:hover {
 
   .event-card-body h3 {
     font-size: 1.8rem;
-  }
-
-  .event-image-wrap {
-    aspect-ratio: 3 / 4;
-    padding: 8px;
   }
 
   .artist-card {
