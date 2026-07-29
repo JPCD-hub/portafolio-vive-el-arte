@@ -368,7 +368,7 @@ const events = [
     subtitle: "Expresión en movimiento",
     category: "Especial",
     date: "8 de julio, 6:00 p.m.",
-    image: "optimized/flyers/7.jpg",
+    image: "optimized/flyers/7.jpg?v=20260727-3",
     gallery: [
       "7/LIVE 1.jpg.jpeg",
       "7/LIVE 3.jpg.jpeg",
@@ -401,7 +401,7 @@ const events = [
     subtitle: "Palabra, poesía y música en vivo",
     category: "General",
     date: "22 de julio, desde las 6:00 p.m.",
-    image: "optimized/flyers/8.jpg?v=20260727-2",
+    image: "optimized/flyers/8.jpg?v=20260727-4",
     gallery: [
       "8/LIVE 32.jpg.jpeg",
       "8/LIVE 33.jpg.jpeg",
