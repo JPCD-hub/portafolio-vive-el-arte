@@ -543,6 +543,16 @@ const artists = [
     instagram: "https://www.instagram.com/_camila_valencia_/",
     instagramLabel: "@_camila_valencia_",
     contact: "https://wa.me/573116405516"
+  },
+  {
+    id: 8,
+    name: "Luz Beyby Bedoya",
+    role: "Actriz, directora y formadora de teatro",
+    photo: "optimized/artists/luz-beyby-bedoya/artist.jpg",
+    description: "Luz Beyby Bedoya es actriz, directora y formadora de teatro con 15 anos de trayectoria artistica. Egresada de la Escuela de Teatro de la Secretaria de Cultura de Pereira y certificada por el SENA en creacion y representacion de personajes, ha trabajado en teatro, cine y television. Tambien cuenta con experiencia en produccion audiovisual y dramaturgia para contenidos digitales, y actualmente acompana procesos de formacion teatral en instituciones educativas de Pereira. Su recorrido incluye participacion en proyectos regionales como La mariposa verde, Eureka y Tres dias despues, asi como talleres, diplomados y festivales teatrales del Eje Cafetero.",
+    works: [],
+    instagram: "",
+    contact: ""
   }
 ];
 
@@ -733,11 +743,9 @@ function renderSponsors() {
 }
 
 function renderArtistWorks(artist) {
-  const works = artist.works.length > 0 ? artist.works : Array.from({ length: 4 }, (_, index) => null);
-
-  artistArtGrid.innerHTML = works.map((work, index) => `
+  artistArtGrid.innerHTML = artist.works.map((work, index) => `
     <div class="artist-work">
-      ${work ? `<img src="${work}" alt="Obra ${index + 1} de ${artist.name}" loading="lazy" decoding="async">` : `<span>Obra ${index + 1}</span>`}
+      <img src="${work}" alt="Obra ${index + 1} de ${artist.name}" loading="lazy" decoding="async">
     </div>
   `).join("");
 }
@@ -758,6 +766,7 @@ function openArtistDetail(artistId) {
     ${artist.contact ? `<a href="${artist.contact}" target="_blank" rel="noopener">Contacto</a>` : ``}
   `;
   renderArtistWorks(artist);
+  artistArtGrid.closest(".gallery-block").hidden = artist.works.length === 0;
 
   artistDetailSection.hidden = false;
   artistDetailSection.scrollIntoView({ behavior: "smooth", block: "start" });
