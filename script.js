@@ -432,6 +432,53 @@ const events = [
     ],
     summary: "Monólogo íntimo con poesía, micrófono abierto y música en vivo para compartir la voz y la escucha.",
     description: "Sierva: Monólogo de Alma Clara reunió palabra escénica, poesía y música en vivo en una noche de encuentro sensible. Luz Beyby Bedoya presentó una puesta en escena íntima y expresiva, acompañada por las voces poéticas de Alejandro Azag y Robinson Wagner. El micrófono abierto amplió la experiencia hacia la participación del público, creando un espacio cercano para escuchar relatos, versos y reflexiones entre artistas, asistentes y la comunidad de Live Podcast Café Bar."
+  },
+  {
+    id: 9,
+    title: "Shibari y Nyotaimori",
+    subtitle: "Miércoles de Arte",
+    category: "Registro",
+    date: "5 de agosto, 6:00 p.m.",
+    image: "optimized/flyers/9.jpg",
+    gallery: [
+      "9/LIVE 1-1.jpg.jpeg",
+      "9/LIVE 2-1.jpg.jpeg",
+      "9/LIVE 4-1.jpg.jpeg",
+      "9/LIVE 19-1.jpg.jpeg",
+      "9/LIVE 36-1.jpg.jpeg",
+      "9/LIVE 53-1.jpg.jpeg",
+      "9/LIVE 54-1.jpg.jpeg",
+      "9/LIVE 57-1.jpg.jpeg",
+      "9/LIVE 61-1.jpg.jpeg",
+      "9/LIVE 65.jpg.jpeg",
+      "9/LIVE 69.jpg.jpeg",
+      "9/LIVE 70.jpg.jpeg",
+      "9/LIVE 74.jpg.jpeg",
+      "9/LIVE 76.jpg.jpeg",
+      "9/LIVE 77.jpg.jpeg",
+      "9/LIVE 78.jpg.jpeg",
+      "9/LIVE 79.jpg.jpeg",
+      "9/LIVE 80.jpg.jpeg",
+      "9/LIVE 81.jpg.jpeg",
+      "9/LIVE 83.jpg.jpeg",
+      "9/LIVE 84.jpg.jpeg",
+      "9/LIVE 85.jpg.jpeg",
+      "9/LIVE 86.jpg.jpeg",
+      "9/LIVE 87.jpg.jpeg",
+      "9/LIVE 90.jpg.jpeg",
+      "9/LIVE 91.jpg.jpeg",
+      "9/LIVE 92.jpg.jpeg",
+      "9/LIVE 93.jpg.jpeg",
+      "9/LIVE 94.jpg.jpeg",
+      "9/LIVE 96.jpg.jpeg",
+      "9/LIVE 97.jpg.jpeg",
+      "9/LIVE 98.jpg.jpeg",
+      "9/LIVE 99.jpg.jpeg",
+      "9/LIVE 100.jpg.jpeg",
+      "9/LIVE 101.jpg.jpeg"
+    ],
+    summary: "Encuentro visual de shibari y nyotaimori con Mao Escruceria, la modelo Lapi y música en vivo.",
+    description: "Miércoles de Arte propuso una noche de exploración visual alrededor del shibari y el nyotaimori. Con Mao Escruceria y la modelo Lapi, el encuentro reunió performance, composición corporal, gastronomía y música en vivo en Live Podcast Café Bar. El registro fotográfico conserva los detalles de la escena, las texturas y la atmósfera de una experiencia pensada para observar el cuerpo y la puesta en escena desde una mirada artística."
   }
 ];
 
@@ -798,7 +845,7 @@ function findGalleryImages(folder) {
 }
 
 function getOptimizedPhotoPath(photo) {
-  return photo.replace(/^(1|2|3|4|5|6|7|8)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
+  return photo.replace(/^(1|2|3|4|5|6|7|8|9)\//, "optimized/$1/").replace(/\.jpg\.jpeg$/, ".jpg");
 }
 
 function hydrateGalleryImages() {
