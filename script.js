@@ -548,7 +548,7 @@ const artists = [
     id: 8,
     name: "Luz Beyby Bedoya",
     role: "Actriz, directora y formadora de teatro",
-    photo: "optimized/artists/luz-beyby-bedoya/artist.jpg",
+    photo: "optimized/artists/luz-beyby-bedoya/artist-square.jpg",
     description: "Luz Beyby Bedoya es actriz, directora y formadora de teatro con 15 años de trayectoria artistica. Egresada de la Escuela de Teatro de la Secretaria de Cultura de Pereira y certificada por el SENA en creacion y representacion de personajes, ha trabajado en teatro, cine y television. Tambien cuenta con experiencia en produccion audiovisual y dramaturgia para contenidos digitales, y actualmente acompana procesos de formacion teatral en instituciones educativas de Pereira. Su recorrido incluye participacion en proyectos regionales como La mariposa verde, Eureka y Tres dias despues, asi como talleres, diplomados y festivales teatrales del Eje Cafetero.",
     works: [],
     instagram: "",
