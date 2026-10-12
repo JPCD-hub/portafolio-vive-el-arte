@@ -1301,7 +1301,7 @@ a.sponsor-logo:hover {
 }
 
 .lightbox-figure figcaption {
-  color: var(--cream);
+  color: #fffaf2;
   font-family: var(--condensed);
   font-size: 0.78rem;
   letter-spacing: 0.12em;
@@ -1313,7 +1313,7 @@ a.sponsor-logo:hover {
   min-width: 44px;
   min-height: 44px;
   border: 1px solid rgba(255, 255, 255, 0.62);
-  color: var(--cream);
+  color: #fffaf2;
   background: rgba(17, 16, 15, 0.72);
   cursor: pointer;
   font-family: var(--condensed);
