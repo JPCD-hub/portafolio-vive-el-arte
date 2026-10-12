@@ -678,6 +678,7 @@ const detailTitle = document.querySelector("#detailTitle");
 const detailSubtitle = document.querySelector("#detailSubtitle");
 const detailDescription = document.querySelector("#detailDescription");
 const detailDate = document.querySelector("#detailDate");
+const videoGallery = document.querySelector("#videoGallery");
 const artistPortrait = document.querySelector("#artistPortrait");
 const artistRole = document.querySelector("#artistRole");
 const artistName = document.querySelector("#artistName");
@@ -692,6 +693,14 @@ const formNote = document.querySelector("#formNote");
 const themeToggle = document.querySelector("#themeToggle");
 const themeToggleText = themeToggle?.querySelector(".theme-toggle-text");
 const revealItems = document.querySelectorAll(".hero-content, .hero-card, .intro-panel, .section-heading, .contact-copy, .contact-form");
+const photoLightbox = document.querySelector("#photoLightbox");
+const lightboxImage = document.querySelector("#lightboxImage");
+const photoLightboxCaption = document.querySelector("#photoLightboxCaption");
+const closeLightbox = document.querySelector("#closeLightbox");
+const previousLightboxPhoto = document.querySelector("#previousLightboxPhoto");
+const nextLightboxPhoto = document.querySelector("#nextLightboxPhoto");
+
+let activeLightboxIndex = 0;
 
 function getPreferredTheme() {
   let savedTheme = null;
@@ -860,6 +869,56 @@ function hydrateGalleryImages() {
   });
 }
 
+function renderVideoGallery(event) {
+  const videos = event.videos || [];
+
+  if (videos.length === 0) {
+    videoGallery.innerHTML = `
+      <div class="empty-gallery">
+        <strong>Registro audiovisual proximo</strong>
+        <p>Los videos de este evento se agregaran aqui cuando esten disponibles.</p>
+      </div>
+    `;
+    return;
+  }
+
+  videoGallery.innerHTML = videos.map((video, index) => `
+    <article class="video-card">
+      <video controls playsinline preload="metadata" ${video.poster ? `poster="${video.poster}"` : ""}>
+        <source src="${video.src}" type="${video.type || "video/mp4"}">
+        Tu navegador no puede reproducir este video.
+      </video>
+      <p>${video.title || `Video ${index + 1} de ${event.title}`}</p>
+    </article>
+  `).join("");
+}
+
+function updateLightboxPhoto() {
+  const photo = activeGalleryImages[activeLightboxIndex];
+  if (!photo) return;
+
+  const photoNumber = activeLightboxIndex + 1;
+  lightboxImage.src = getOptimizedPhotoPath(photo);
+  lightboxImage.alt = `Registro fotografico ${photoNumber} de ${activeGalleryTitle}`;
+  photoLightboxCaption.textContent = `Fotografia ${photoNumber} de ${activeGalleryImages.length}`;
+  previousLightboxPhoto.disabled = activeGalleryImages.length <= 1;
+  nextLightboxPhoto.disabled = activeGalleryImages.length <= 1;
+}
+
+function openPhotoLightbox(index) {
+  if (!activeGalleryImages[index]) return;
+
+  activeLightboxIndex = index;
+  updateLightboxPhoto();
+  if (!photoLightbox.open) photoLightbox.showModal();
+}
+
+function moveLightboxPhoto(step) {
+  if (activeGalleryImages.length <= 1) return;
+  activeLightboxIndex = (activeLightboxIndex + step + activeGalleryImages.length) % activeGalleryImages.length;
+  updateLightboxPhoto();
+}
+
 function renderGallery() {
   const visibleImages = activeGalleryImages.slice(0, visibleGalleryCount);
   const remainingImages = activeGalleryImages.length - visibleImages.length;
@@ -867,7 +926,9 @@ function renderGallery() {
   photoGallery.innerHTML = visibleImages.map((photo, index) => `
     <figure class="gallery-item">
       <span class="image-loader" aria-hidden="true"></span>
-      <img src="${getOptimizedPhotoPath(photo)}" alt="Registro fotografico ${index + 1} de ${activeGalleryTitle}" loading="lazy" decoding="async">
+      <button class="gallery-image-button" type="button" data-gallery-index="${index}" aria-label="Ampliar fotografia ${index + 1} de ${activeGalleryTitle}">
+        <img src="${getOptimizedPhotoPath(photo)}" alt="Registro fotografico ${index + 1} de ${activeGalleryTitle}" loading="lazy" decoding="async">
+      </button>
     </figure>
   `).join("");
 
@@ -894,6 +955,7 @@ async function openEventDetail(eventId) {
   detailSubtitle.hidden = !event.subtitle;
   detailDescription.textContent = event.description;
   detailDate.textContent = event.date;
+  renderVideoGallery(event);
   photoGallery.innerHTML = `
     <div class="empty-gallery">
       <strong>Cargando registro</strong>
@@ -934,9 +996,29 @@ artistsGrid.addEventListener("click", (event) => {
 });
 
 photoGallery.addEventListener("click", (event) => {
-  if (!event.target.closest("#loadMoreGallery")) return;
-  visibleGalleryCount += GALLERY_BATCH_SIZE;
-  renderGallery();
+  const photoButton = event.target.closest("[data-gallery-index]");
+  if (photoButton) {
+    openPhotoLightbox(Number(photoButton.dataset.galleryIndex));
+    return;
+  }
+
+  if (event.target.closest("#loadMoreGallery")) {
+    visibleGalleryCount += GALLERY_BATCH_SIZE;
+    renderGallery();
+  }
+});
+
+closeLightbox.addEventListener("click", () => photoLightbox.close());
+previousLightboxPhoto.addEventListener("click", () => moveLightboxPhoto(-1));
+nextLightboxPhoto.addEventListener("click", () => moveLightboxPhoto(1));
+
+photoLightbox.addEventListener("click", (event) => {
+  if (event.target === photoLightbox) photoLightbox.close();
+});
+
+photoLightbox.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") moveLightboxPhoto(-1);
+  if (event.key === "ArrowRight") moveLightboxPhoto(1);
 });
 
 backToEvents.addEventListener("click", () => {
