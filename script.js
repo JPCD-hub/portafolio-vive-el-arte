@@ -89,6 +89,13 @@ const events = [
       "1/DSC_0426.jpg",
       "1/DSC_0433.jpg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/1/evento-1.mp4",
+        poster: "optimized/videos/1/evento-1.jpg",
+        title: "Registro audiovisual de Pintura al estilo barroco"
+      }
+    ],
     summary: "Una noche de pintura en vivo inspirada en la estetica barroca, con modelo, vino y musica.",
     description: "Pintura al estilo barroco fue una experiencia contemplativa alrededor del retrato, la luz y la puesta en escena. El publico acompano el proceso de una obra en vivo con modelo, saxofon, musica y una copa de vino, en un ambiente intimo que mezclo elegancia, observacion y encuentro artistico. Al final, la pieza hizo parte de una dinamica de subasta entre los asistentes, reforzando la idea de Vive El Arte como vitrina para creadores locales."
   },
