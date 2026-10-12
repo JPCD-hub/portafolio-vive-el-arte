@@ -1238,6 +1238,8 @@ a.sponsor-logo:hover {
 }
 
 .video-card {
+  display: grid;
+  justify-items: center;
   overflow: hidden;
   border: 1px solid var(--line-strong);
   background: var(--surface);
@@ -1246,8 +1248,10 @@ a.sponsor-logo:hover {
 
 .video-card video {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(78dvh, 800px);
   background: var(--ink);
 }
 

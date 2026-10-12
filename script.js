@@ -111,6 +111,13 @@ const events = [
       "2/IMG-20260430-WA0210.jpg",
       "2/IMG-20260430-WA0214.jpg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/2/evento-2.mp4",
+        poster: "optimized/videos/2/evento-2.jpg",
+        title: "Registro audiovisual de Body painting"
+      }
+    ],
     summary: "Body painting contemplativo con modelo en vivo, color, musica y registro del proceso creativo.",
     description: "Este encuentro de body painting propuso el cuerpo como lienzo vivo y la pintura como una accion en tiempo real. La galeria registra el avance de la obra, los detalles del trazo, la relacion entre artista y modelo, y la energia del cafe bar durante la noche. Fue un evento para observar de cerca la transformacion del cuerpo mediante color, textura, musica en vivo y una atmosfera de contemplacion colectiva."
   },
@@ -263,6 +270,13 @@ const events = [
       "4/SHIBARI 068.jpg.jpeg",
       "4/SHIBARI 070.jpg.jpeg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/4/evento-4.mp4",
+        poster: "optimized/videos/4/evento-4.jpg",
+        title: "Registro audiovisual de Shibari, la restriccion erotica"
+      }
+    ],
     summary: "Charla y demostracion de shibari como practica visual, corporal y educativa.",
     description: "Shibari, la restriccion erotica, abordo el cuerpo, la confianza y la tension desde una mirada contemplativa y pedagogica. La noche incluyo charla, demostracion en vivo, musica y copa de vino, creando un espacio para observar como la restriccion puede convertirse en lenguaje visual y sensorial. El registro fotografico destaca la composicion de las cuerdas, la relacion entre modelo y artista, y la fuerza estetica de una practica guiada con respeto y cuidado."
   },
@@ -359,6 +373,13 @@ const events = [
       "6/DSC_0713.jpg",
       "6/DSC_0722.jpg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/6/evento-6.mp4",
+        poster: "optimized/videos/6/evento-6.jpg",
+        title: "Registro audiovisual de Body Painting"
+      }
+    ],
     summary: "Body painting de alto impacto visual con artistas en vivo, comunidad, fuego cromatico y musica.",
     description: "Body Painting fue una experiencia de expresion, color y libertad, centrada en el cuerpo como soporte artistico y en la pintura como acto performatico. La propuesta visual trabajo una paleta intensa, gestos organicos y una puesta en escena de gran fuerza cromatica. Las fotografias muestran el proceso, los detalles de la obra corporal, la interaccion con la comunidad y la energia de una noche pensada para contemplar el arte en vivo."
   },
@@ -391,6 +412,18 @@ const events = [
       "7/LIVE 25.jpg.jpeg",
       "7/LIVE 29.jpg.jpeg",
       "7/LIVE 31.jpg.jpeg"
+    ],
+    videos: [
+      {
+        src: "optimized/videos/7/evento-7-1.mp4",
+        poster: "optimized/videos/7/evento-7-1.jpg",
+        title: "Registro audiovisual 1 de Baile"
+      },
+      {
+        src: "optimized/videos/7/evento-7-2.mp4",
+        poster: "optimized/videos/7/evento-7-2.jpg",
+        title: "Registro audiovisual 2 de Baile"
+      }
     ],
     summary: "Encuentro de baile contemporaneo, folclor y poema interpretado con Maria Camila Valencia.",
     description: "Baile propone una noche para vivir el arte a traves del movimiento. El evento reune baile contemporaneo, folclor y poema interpretado en un espacio pensado para sumergirse, contemplar y conectar con el cuerpo como lenguaje escenico. Con Maria Camila Valencia como artista invitada, la experiencia combina presencia, musica en vivo, sensibilidad poetica y una copa de vino en Live Podcast Cafe Bar."
@@ -429,6 +462,13 @@ const events = [
       "8/LIVE 59.jpg.jpeg",
       "8/LIVE 60.jpg.jpeg",
       "8/LIVE 61.jpg.jpeg"
+    ],
+    videos: [
+      {
+        src: "optimized/videos/8/evento-8.mp4",
+        poster: "optimized/videos/8/evento-8.jpg",
+        title: "Registro audiovisual de Sierva: Monólogo de Alma Clara"
+      }
     ],
     summary: "Monólogo íntimo con poesía, micrófono abierto y música en vivo para compartir la voz y la escucha.",
     description: "Sierva: Monólogo de Alma Clara reunió palabra escénica, poesía y música en vivo en una noche de encuentro sensible. Luz Beyby Bedoya presentó una puesta en escena íntima y expresiva, acompañada por las voces poéticas de Alejandro Azag y Robinson Wagner. El micrófono abierto amplió la experiencia hacia la participación del público, creando un espacio cercano para escuchar relatos, versos y reflexiones entre artistas, asistentes y la comunidad de Live Podcast Café Bar."
