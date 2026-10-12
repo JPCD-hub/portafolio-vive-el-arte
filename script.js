@@ -311,6 +311,13 @@ const events = [
       "5/IMG-20260604-WA0105.jpg",
       "5/IMG-20260604-WA0106.jpg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/5/evento-5.mp4",
+        poster: "optimized/videos/5/evento-5.jpg",
+        title: "Registro audiovisual de Miercoles Poesia"
+      }
+    ],
     summary: "Microfono poetico para compartir textos, escuchar voces locales y crear comunidad desde la palabra.",
     description: "Miercoles Poesia fue un encuentro abierto para leer, escuchar y compartir poemas propios o de autor. En un ambiente cercano, las palabras funcionaron como punto de reunion entre artistas, asistentes y amantes de la escritura. El registro del evento recoge momentos de lectura, conversacion y escucha, mostrando una experiencia mas intima donde la poesia se convierte en puente para conectar sensibilidades."
   },
