@@ -477,6 +477,13 @@ const events = [
       "9/LIVE 100.jpg.jpeg",
       "9/LIVE 101.jpg.jpeg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/9/evento-9.mp4",
+        poster: "optimized/videos/9/evento-9.jpg",
+        title: "Registro audiovisual de Shibari y Nyotaimori"
+      }
+    ],
     summary: "Encuentro visual de shibari y nyotaimori con Mao Escruceria, la modelo Lapi y música en vivo.",
     description: "Miércoles de Arte propuso una noche de exploración visual alrededor del shibari y el nyotaimori. Con Mao Escruceria y la modelo Lapi, el encuentro reunió performance, composición corporal, gastronomía y música en vivo en Live Podcast Café Bar. El registro fotográfico conserva los detalles de la escena, las texturas y la atmósfera de una experiencia pensada para observar el cuerpo y la puesta en escena desde una mirada artística."
   }
