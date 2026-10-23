@@ -421,7 +421,7 @@ a {
 .live-photo-placeholder {
   align-self: center;
   justify-self: center;
-  width: min(100%, 300px);
+  width: min(100%, 380px);
   aspect-ratio: 16 / 9;
   display: grid;
   place-items: center;
@@ -1537,7 +1537,7 @@ a.sponsor-logo:hover {
   }
 
   .live-photo-placeholder {
-    width: min(100%, 320px);
+    width: min(100%, 380px);
   }
 
   .detail-visual {
@@ -1635,7 +1635,7 @@ a.sponsor-logo:hover {
 
   .live-photo-placeholder {
     width: 100%;
-    max-width: 240px;
+    max-width: 300px;
     margin: 44px auto 10px;
   }
 
