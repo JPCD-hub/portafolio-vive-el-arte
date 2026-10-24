@@ -244,6 +244,13 @@ const events = [
       "3/IMG-20260513-WA0209.jpg",
       "3/IMG-20260513-WA0211.jpg"
     ],
+    videos: [
+      {
+        src: "optimized/videos/3/evento-3.mp4",
+        poster: "optimized/videos/3/evento-3.jpg",
+        title: "Registro audiovisual de Fotografia Burlesque"
+      }
+    ],
     summary: "Sesion burlesque para explorar fotografia, direccion de modelo, luz y participacion del publico.",
     description: "Fotografia Burlesque reunio una puesta en escena sensual, teatral y educativa para vivir la fotografia desde ambos lados de la camara. El evento combino modelo en vivo, consejos fotograficos, musica y participacion abierta, permitiendo que asistentes experimentaran como fotografos, observadores o parte de la escena. Las imagenes documentan poses, gestos, detalles de vestuario y momentos de direccion creativa en un ambiente intimo."
   },
